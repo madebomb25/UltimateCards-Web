@@ -1,0 +1,486 @@
+<!doctype html>
+<html lang="es">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link rel="icon" href="styles/img/logo.png" type="image/png" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+        <script src="https://kit.fontawesome.com/f3a29394bf.js" crossorigin="anonymous"></script>
+        <link rel="stylesheet" href="styles/global/output.css" />
+        <link rel="stylesheet" href="styles/global/circleBackground.css" />
+        <style>
+            .floating-cards {
+                display: flex;
+                align-content: center;
+                position: absolute;
+                flex-direction: column;
+
+                flex-wrap: wrap;
+
+                width: 100%;
+                height: 100%;
+                overflow: hidden;
+            }
+
+            .row {
+                display: flex;
+                position: absolute;
+                justify-content: space-between;
+                align-items: center;
+                overflow: hidden;
+                bottom: -16.5em;
+                opacity: 0.8;
+            }
+
+            .row img {
+                display: flex;
+                width: 10em;
+                height: 16.5em;
+                position: relative;
+            }
+
+            .row:nth-child(1) {
+                animation: floatcards 15s linear infinite;
+            }
+
+            .row:nth-child(2) {
+                animation: floatcards 15s linear 5s infinite;
+            }
+
+            .row:nth-child(3) {
+                animation: floatcards 15s linear 10s infinite;
+            }
+
+            @keyframes floatcards {
+                0% {
+                    transform: translateY(0);
+                }
+
+                100% {
+                    transform: translateY(-79vh);
+                }
+            }
+
+            .circles {
+                z-index: 0;
+            }
+
+            .circles li {
+                background: rgba(255, 255, 255, 0.4);
+            }
+        </style>
+        <title>FAQ Ultimate Cards</title>
+    </head>
+    <body class="flex flex-col items-center overflow-x-hidden font-Roboto">
+        <header class="dec-shadow z-20 flex h-[5.5em] w-full items-center justify-around bg-white">
+            <a href="index.html" class="logo flex cursor-pointer items-center gap-[1em]">
+                <img src="styles/img/logo.png" class="h-[3em]" />
+                <h1 class="font-Archive text-[27px]">ULTIMATE <span class="relative text-logoPurple">CARDS</span></h1>
+            </a>
+            <nav class="flex items-center gap-[3em]">
+                <a href="index.html" class="flex h-[3em] w-[3em] items-center justify-center rounded-[.8em] bg-alternate1">
+                    <i class="fa-solid fa-house text-white"></i>
+                </a>
+            </nav>
+        </header>
+
+        <div class="circuits-bg flex w-full justify-center">
+            <div class="flex h-full min-h-[100dvh] w-full max-w-[88em] flex-col items-center overflow-x-hidden bg-white">
+                <div class="relative flex h-[30em] w-full flex-col items-center justify-center overflow-hidden rounded-b-[2em] bg-alternate1">
+                    <h1 class="z-10 rounded-[1em] bg-white p-[1em] font-Archive text-[1.8em]">How may we help you?</h1>
+                    <ul class="circles">
+                        <li></li>
+                        <li></li>
+                        <li></li>
+                        <li></li>
+                        <li></li>
+                        <li></li>
+                        <li></li>
+                        <li></li>
+                        <li></li>
+                        <li></li>
+                    </ul>
+                </div>
+
+                <div class="mb-[10em] mt-[3em] flex w-full flex-col px-[3em]">
+                    <div class="flex flex-col gap-[1em]">
+                        <h1 class="text-[1.8em] font-medium">COMMON QUESTION CATEGORIES</h1>
+                        <div class="grid w-full grid-cols-3 gap-[2em]">
+                            <a href="#about-accounts" class="flex w-full rounded-[1em] p-[1em]" style="box-shadow: 0px 2px 9px 1px rgba(31, 28, 65, 0.2)">
+                                <div class="flex items-center gap-[1em]">
+                                    <div class="flex h-[4.5em] w-[4.5em] items-center justify-center rounded-[1em] bg-blue-600 text-white">
+                                        <i class="fa-solid fa-address-card text-[2em]"></i>
+                                    </div>
+                                    <h2 class="font-Archive text-[1.7em]">ABOUT ACCOUNTS</h2>
+                                </div>
+                            </a>
+                            <a href="#about-payments" class="flex w-full rounded-[1em] p-[1em]" style="box-shadow: 0px 2px 9px 1px rgba(31, 28, 65, 0.2)">
+                                <div class="flex items-center gap-[1em]">
+                                    <div class="flex min-h-[4.5em] min-w-[4.5em] items-center justify-center rounded-[1em] bg-green-500 text-white">
+                                        <i class="fa-solid fa-cart-shopping text-[2em]"></i>
+                                    </div>
+                                    <h2 class="font-Archive text-[1.7em]">ABOUT PAYMENTS</h2>
+                                </div>
+                            </a>
+                            <a href="#about-conditions" class="flex w-full rounded-[1em] p-[1em]" style="box-shadow: 0px 2px 9px 1px rgba(31, 28, 65, 0.2)">
+                                <div class="flex items-center gap-[1em]">
+                                    <div class="flex min-h-[4.5em] min-w-[4.5em] items-center justify-center rounded-[1em] bg-red-500 text-white">
+                                        <i class="fa-solid fa-gavel text-[2em]"></i>
+                                    </div>
+                                    <h2 class="font-Archive text-[1.7em]">CONDITIONS OF USE</h2>
+                                </div>
+                            </a>
+                            <a href="#about-privacy" class="flex w-full rounded-[1em] p-[1em]" style="box-shadow: 0px 2px 9px 1px rgba(31, 28, 65, 0.2)">
+                                <div class="flex items-center gap-[1em]">
+                                    <div class="flex min-h-[4.5em] min-w-[4.5em] items-center justify-center rounded-[1em] bg-purple-800 text-white">
+                                        <i class="fa-solid fa-lock text-[2em]"></i>
+                                    </div>
+                                    <h2 class="font-Archive text-[1.7em]">DATA PRIVACY AND SECURITY</h2>
+                                </div>
+                            </a>
+                            <a href="#about-support" class="flex w-full rounded-[1em] p-[1em]" style="box-shadow: 0px 2px 9px 1px rgba(31, 28, 65, 0.2)">
+                                <div class="flex items-center gap-[1em]">
+                                    <div class="flex min-h-[4.5em] min-w-[4.5em] items-center justify-center rounded-[1em] bg-amber-500 text-white">
+                                        <i class="fa-solid fa-phone-volume text-[2em]"></i>
+                                    </div>
+                                    <h2 class="font-Archive text-[1.7em]">SUPPORT & CONTACT</h2>
+                                </div>
+                            </a>
+                            <a href="#about-rules" class="flex w-full rounded-[1em] p-[1em]" style="box-shadow: 0px 2px 9px 1px rgba(31, 28, 65, 0.2)">
+                                <div class="flex items-center gap-[1em]">
+                                    <div class="flex min-h-[4.5em] min-w-[4.5em] items-center justify-center rounded-[1em] bg-alternate1 text-white">
+                                        <i class="fa-solid fa-users text-[2em]"></i>
+                                    </div>
+                                    <h2 class="font-Archive text-[1.7em]">RULES AND BEHAVIOR MANUAL</h2>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                    <div id="about-accounts" class="mt-[2em] flex flex-col gap-[1em]">
+                        <h1 class="flex items-center gap-[.5em] text-[1.8em] font-medium"><i class="fa-solid fa-address-card text-[1.4em]"></i>ABOUT ACCOUNTS</h1>
+                        <div class="grid w-full grid-cols-2 gap-[1.5em] gap-y-[1em]">
+                            <button onclick="unfoldFaq(this)" class="flex h-fit w-full flex-col overflow-hidden rounded-[1em]" style="box-shadow: 0px 2px 9px 1px rgba(31, 28, 65, 0.2)">
+                                <div class="flex w-full items-center justify-between rounded-[1em] p-[1em]">
+                                    <p class="text-left text-[1.2em]">What happens if I forget my password?</p>
+                                    <i class="fa-solid fa-plus text-[1.7em]"></i>
+                                </div>
+                                <span style="display: none" class="w-full flex-col bg-white px-[1em] pb-[1em]">
+                                    <div class="h-[.4em] w-full rounded-[1em] bg-slate-300"></div>
+                                    <p class="mt-[1em] text-left">If you forget your password, you can use the "Forgot Password" link on the login page to reset it. You'll receive instructions via email on how to create a new password.</p>
+                                </span>
+                            </button>
+                            <button onclick="unfoldFaq(this)" class="flex h-fit w-full flex-col overflow-hidden rounded-[1em]" style="box-shadow: 0px 2px 9px 1px rgba(31, 28, 65, 0.2)">
+                                <div class="flex w-full items-center justify-between rounded-[1em] p-[1em]">
+                                    <p class="text-left text-[1.2em]">How can I change my password?</p>
+                                    <i class="fa-solid fa-plus text-[1.7em]"></i>
+                                </div>
+                                <span style="display: none" class="w-full flex-col bg-white px-[1em] pb-[1em]">
+                                    <div class="h-[.4em] w-full rounded-[1em] bg-slate-300"></div>
+                                    <p class="mt-[1em] text-left">If you remember your password but you're willing to change it, you can do it from your account profile in the "Settings" section. You will need to provide your current password for be able to change it.</p>
+                                </span>
+                            </button>
+                            <button onclick="unfoldFaq(this)" class="flex h-fit w-full flex-col overflow-hidden rounded-[1em]" style="box-shadow: 0px 2px 9px 1px rgba(31, 28, 65, 0.2)">
+                                <div class="flex w-full items-center justify-between rounded-[1em] p-[1em]">
+                                    <p class="text-left text-[1.2em]">What should I do if I suspect someone has accessed my account without permission?</p>
+                                    <i class="fa-solid fa-plus text-[1.7em]"></i>
+                                </div>
+                                <span style="display: none" class="w-full flex-col bg-white px-[1em] pb-[1em]">
+                                    <div class="h-[.4em] w-full rounded-[1em] bg-slate-300"></div>
+                                    <p class="mt-[1em] text-left">If you suspect unauthorized access to your account, we recommend changing your password immediately. If your account was damaged in any way, contact our support team for further assistance.</p>
+                                </span>
+                            </button>
+                            <button onclick="unfoldFaq(this)" class="flex h-fit w-full flex-col overflow-hidden rounded-[1em]" style="box-shadow: 0px 2px 9px 1px rgba(31, 28, 65, 0.2)">
+                                <div class="flex w-full items-center justify-between rounded-[1em] p-[1em]">
+                                    <p class="text-left text-[1.2em]">Do you offer account migration for users who want to switch to a different email address?</p>
+                                    <i class="fa-solid fa-plus text-[1.7em]"></i>
+                                </div>
+                                <span style="display: none" class="w-full flex-col bg-white px-[1em] pb-[1em]">
+                                    <div class="h-[.4em] w-full rounded-[1em] bg-slate-300"></div>
+                                    <p class="mt-[1em] text-left">Yes, we can assist you with migrating your account to a different email address. Please contact our support team with your request, and we'll guide you through the process.</p>
+                                </span>
+                            </button>
+                        </div>
+                    </div>
+                    <div id="about-payments" class="mt-[2em] flex flex-col gap-[1em]">
+                        <h1 class="flex items-center gap-[.5em] text-[1.8em] font-medium"><i class="fa-solid fa-cart-shopping text-[1.4em]"></i>ABOUT PAYMENTS</h1>
+                        <div class="grid w-full grid-cols-2 gap-[1.5em] gap-y-[1em]">
+                            <button onclick="unfoldFaq(this)" class="flex h-fit w-full flex-col overflow-hidden rounded-[1em]" style="box-shadow: 0px 2px 9px 1px rgba(31, 28, 65, 0.2)">
+                                <div class="flex w-full items-center justify-between rounded-[1em] p-[1em]">
+                                    <p class="text-left text-[1.2em]">Is the subscription fee charged monthly or annually?</p>
+                                    <i class="fa-solid fa-plus text-[1.7em]"></i>
+                                </div>
+                                <span style="display: none" class="w-full flex-col bg-white px-[1em] pb-[1em]">
+                                    <div class="h-[.4em] w-full rounded-[1em] bg-slate-300"></div>
+                                    <p class="mt-[1em] text-left">The subscription fee is charged on a monthly basis. You'll be billed automatically each month unless you cancel your subscription.</p>
+                                </span>
+                            </button>
+                            <button onclick="unfoldFaq(this)" class="flex h-fit w-full flex-col overflow-hidden rounded-[1em]" style="box-shadow: 0px 2px 9px 1px rgba(31, 28, 65, 0.2)">
+                                <div class="flex w-full items-center justify-between rounded-[1em] p-[1em]">
+                                    <p class="text-left text-[1.2em]">Can I cancel my subscription at any time?</p>
+                                    <i class="fa-solid fa-plus text-[1.7em]"></i>
+                                </div>
+                                <span style="display: none" class="w-full flex-col bg-white px-[1em] pb-[1em]">
+                                    <div class="h-[.4em] w-full rounded-[1em] bg-slate-300"></div>
+                                    <p class="mt-[1em] text-left">Yes, you can cancel your subscription at any time. Your subscription will remain active until the end of the current billing period, after which it will be terminated.</p>
+                                </span>
+                            </button>
+                            <button onclick="unfoldFaq(this)" class="flex h-fit w-full flex-col overflow-hidden rounded-[1em]" style="box-shadow: 0px 2px 9px 1px rgba(31, 28, 65, 0.2)">
+                                <div class="flex w-full items-center justify-between rounded-[1em] p-[1em]">
+                                    <p class="text-left text-[1.2em]">Are there any penalties for canceling my subscription early?</p>
+                                    <i class="fa-solid fa-plus text-[1.7em]"></i>
+                                </div>
+                                <span style="display: none" class="w-full flex-col bg-white px-[1em] pb-[1em]">
+                                    <div class="h-[.4em] w-full rounded-[1em] bg-slate-300"></div>
+                                    <p class="mt-[1em] text-left">There are no penalties for canceling your subscription early. You'll continue to have access to the service until the end of the current billing period.</p>
+                                </span>
+                            </button>
+                            <button onclick="unfoldFaq(this)" class="flex h-fit w-full flex-col overflow-hidden rounded-[1em]" style="box-shadow: 0px 2px 9px 1px rgba(31, 28, 65, 0.2)">
+                                <div class="flex w-full items-center justify-between rounded-[1em] p-[1em]">
+                                    <p class="text-left text-[1.2em]">How will I be notified of upcoming subscription renewals?</p>
+                                    <i class="fa-solid fa-plus text-[1.7em]"></i>
+                                </div>
+                                <span style="display: none" class="w-full flex-col bg-white px-[1em] pb-[1em]">
+                                    <div class="h-[.4em] w-full rounded-[1em] bg-slate-300"></div>
+                                    <p class="mt-[1em] text-left">We'll send you a reminder email before your subscription is due for renewal. This will give you the opportunity to review your subscription and make any necessary changes.</p>
+                                </span>
+                            </button>
+                            <button onclick="unfoldFaq(this)" class="flex h-fit w-full flex-col overflow-hidden rounded-[1em]" style="box-shadow: 0px 2px 9px 1px rgba(31, 28, 65, 0.2)">
+                                <div class="flex w-full items-center justify-between rounded-[1em] p-[1em]">
+                                    <p class="text-left text-[1.2em]">What happens if my payment fails or is declined?</p>
+                                    <i class="fa-solid fa-plus text-[1.7em]"></i>
+                                </div>
+                                <span style="display: none" class="w-full flex-col bg-white px-[1em] pb-[1em]">
+                                    <div class="h-[.4em] w-full rounded-[1em] bg-slate-300"></div>
+                                    <p class="mt-[1em] text-left">If your payment fails or is declined, we'll attempt to notify you via email. You'll have a grace period to update your payment information and prevent any interruption to your subscription.</p>
+                                </span>
+                            </button>
+                        </div>
+                    </div>
+                    <div id="about-conditions" class="mt-[2em] flex flex-col gap-[1em]">
+                        <h1 class="flex items-center gap-[.5em] text-[1.8em] font-medium"><i class="fa-solid fa-gavel text-[1.4em]"></i>CONDITIONS OF USE</h1>
+                        <div class="grid w-full grid-cols-2 gap-[1.5em] gap-y-[1em]">
+                            <button onclick="unfoldFaq(this)" class="flex h-fit w-full flex-col overflow-hidden rounded-[1em]" style="box-shadow: 0px 2px 9px 1px rgba(31, 28, 65, 0.2)">
+                                <div class="flex w-full items-center justify-between rounded-[1em] p-[1em]">
+                                    <p class="text-left text-[1.2em]">Do you have a content moderation process in place?</p>
+                                    <i class="fa-solid fa-plus text-[1.7em]"></i>
+                                </div>
+                                <span style="display: none" class="w-full flex-col bg-white px-[1em] pb-[1em]">
+                                    <div class="h-[.4em] w-full rounded-[1em] bg-slate-300"></div>
+                                    <p class="mt-[1em] text-left">Yes, we have a content moderation process in place to review card designs and ensure they comply with our guidelines. However, users are ultimately responsible for the content they create, and we encourage reporting of any inappropriate content.</p>
+                                </span>
+                            </button>
+                            <button onclick="unfoldFaq(this)" class="flex h-fit w-full flex-col overflow-hidden rounded-[1em]" style="box-shadow: 0px 2px 9px 1px rgba(31, 28, 65, 0.2)">
+                                <div class="flex w-full items-center justify-between rounded-[1em] p-[1em]">
+                                    <p class="text-left text-[1.2em]">What actions can lead to account suspension or termination?</p>
+                                    <i class="fa-solid fa-plus text-[1.7em]"></i>
+                                </div>
+                                <span style="display: none" class="w-full flex-col bg-white px-[1em] pb-[1em]">
+                                    <div class="h-[.4em] w-full rounded-[1em] bg-slate-300"></div>
+                                    <p class="mt-[1em] text-left">Violating our terms of service, engaging in fraudulent activities, or repeatedly creating inappropriate content can result in account suspension or termination. We reserve the right to take appropriate action to enforce our policies and maintain a safe environment for all users.</p>
+                                </span>
+                            </button>
+                            <button onclick="unfoldFaq(this)" class="flex h-fit w-full flex-col overflow-hidden rounded-[1em]" style="box-shadow: 0px 2px 9px 1px rgba(31, 28, 65, 0.2)">
+                                <div class="flex w-full items-center justify-between rounded-[1em] p-[1em]">
+                                    <p class="text-left text-[1.2em]">Are there any restrictions on the types of content I can create with the card creator?</p>
+                                    <i class="fa-solid fa-plus text-[1.7em]"></i>
+                                </div>
+                                <span style="display: none" class="w-full flex-col bg-white px-[1em] pb-[1em]">
+                                    <div class="h-[.4em] w-full rounded-[1em] bg-slate-300"></div>
+                                    <p class="mt-[1em] text-left">While we encourage creativity, there are guidelines in place to ensure that content created with the card creator is appropriate and respectful. Content that violates our terms of service, including but not limited to hate speech, harassment, or explicit material, will be removed.</p>
+                                </span>
+                            </button>
+                            <button onclick="unfoldFaq(this)" class="flex h-fit w-full flex-col overflow-hidden rounded-[1em]" style="box-shadow: 0px 2px 9px 1px rgba(31, 28, 65, 0.2)">
+                                <div class="flex w-full items-center justify-between rounded-[1em] p-[1em]">
+                                    <p class="text-left text-[1.2em]">Am I allowed to use trademarks or copyrighted material in my card designs?</p>
+                                    <i class="fa-solid fa-plus text-[1.7em]"></i>
+                                </div>
+                                <span style="display: none" class="w-full flex-col bg-white px-[1em] pb-[1em]">
+                                    <div class="h-[.4em] w-full rounded-[1em] bg-slate-300"></div>
+                                    <p class="mt-[1em] text-left">It is your responsibility to ensure that your card designs do not infringe upon the intellectual property rights of others. Using trademarks or copyrighted material without proper authorization may result in the removal of the card or design that infringes author rights if he asks us to do so.</p>
+                                </span>
+                            </button>
+                            <button onclick="unfoldFaq(this)" class="flex h-fit w-full flex-col overflow-hidden rounded-[1em]" style="box-shadow: 0px 2px 9px 1px rgba(31, 28, 65, 0.2)">
+                                <div class="flex w-full items-center justify-between rounded-[1em] p-[1em]">
+                                    <p class="text-left text-[1.2em]">Can I use the card creator for commercial, educational or personal projects?</p>
+                                    <i class="fa-solid fa-plus text-[1.7em]"></i>
+                                </div>
+                                <span style="display: none" class="w-full flex-col bg-white px-[1em] pb-[1em]">
+                                    <div class="h-[.4em] w-full rounded-[1em] bg-slate-300"></div>
+                                    <p class="mt-[1em] text-left">Only users with an active suscription plan are allowed and have full personal or comercial permission to use their cards as they see fit. Free or non-suscription users can use their cards only for educational or personal non-commercial projects.</p>
+                                </span>
+                            </button>
+                            <button onclick="unfoldFaq(this)" class="flex h-fit w-full flex-col overflow-hidden rounded-[1em]" style="box-shadow: 0px 2px 9px 1px rgba(31, 28, 65, 0.2)">
+                                <div class="flex w-full items-center justify-between rounded-[1em] p-[1em]">
+                                    <p class="text-left text-[1.2em]">What should I do if I come across inappropriate content on the platform?</p>
+                                    <i class="fa-solid fa-plus text-[1.7em]"></i>
+                                </div>
+                                <span style="display: none" class="w-full flex-col bg-white px-[1em] pb-[1em]">
+                                    <div class="h-[.4em] w-full rounded-[1em] bg-slate-300"></div>
+                                    <p class="mt-[1em] text-left">If you encounter inappropriate content on the platform, please report it to our moderation team immediately. We take reports seriously and will investigate any violations of our terms of service promptly.</p>
+                                </span>
+                            </button>
+                        </div>
+                    </div>
+
+                    <div id="about-privacy" class="mt-[2em] flex flex-col gap-[1em]">
+                        <h1 class="flex items-center gap-[.5em] text-[1.8em] font-medium"><i class="fa-solid fa-lock text-[1.4em]"></i>DATA PRIVACY AND SECURITY</h1>
+                        <div class="grid w-full grid-cols-2 gap-[1.5em] gap-y-[1em]">
+                            <button onclick="unfoldFaq(this)" class="flex h-fit w-full flex-col overflow-hidden rounded-[1em]" style="box-shadow: 0px 2px 9px 1px rgba(31, 28, 65, 0.2)">
+                                <div class="flex w-full items-center justify-between rounded-[1em] p-[1em]">
+                                    <p class="text-left text-[1.2em]">How do you handle my personal information?</p>
+                                    <i class="fa-solid fa-plus text-[1.7em]"></i>
+                                </div>
+                                <span style="display: none" class="w-full flex-col bg-white px-[1em] pb-[1em]">
+                                    <div class="h-[.4em] w-full rounded-[1em] bg-slate-300"></div>
+                                    <p class="mt-[1em] text-left">We take your privacy seriously and handle your personal information with the utmost care. Your data is stored securely and used only for the purposes outlined in our privacy policy.</p>
+                                </span>
+                            </button>
+                            <button onclick="unfoldFaq(this)" class="flex h-fit w-full flex-col overflow-hidden rounded-[1em]" style="box-shadow: 0px 2px 9px 1px rgba(31, 28, 65, 0.2)">
+                                <div class="flex w-full items-center justify-between rounded-[1em] p-[1em]">
+                                    <p class="text-left text-[1.2em]">Do you share my personal information with third parties?</p>
+                                    <i class="fa-solid fa-plus text-[1.7em]"></i>
+                                </div>
+                                <span style="display: none" class="w-full flex-col bg-white px-[1em] pb-[1em]">
+                                    <div class="h-[.4em] w-full rounded-[1em] bg-slate-300"></div>
+                                    <p class="mt-[1em] text-left">We do not share your personal information with third parties without your consent, except as required by law or outlined in our privacy policy. Your privacy is our priority.</p>
+                                </span>
+                            </button>
+                            <button onclick="unfoldFaq(this)" class="flex h-fit w-full flex-col overflow-hidden rounded-[1em]" style="box-shadow: 0px 2px 9px 1px rgba(31, 28, 65, 0.2)">
+                                <div class="flex w-full items-center justify-between rounded-[1em] p-[1em]">
+                                    <p class="text-left text-[1.2em]">Do you use cookies or tracking technologies on your website?</p>
+                                    <i class="fa-solid fa-plus text-[1.7em]"></i>
+                                </div>
+                                <span style="display: none" class="w-full flex-col bg-white px-[1em] pb-[1em]">
+                                    <div class="h-[.4em] w-full rounded-[1em] bg-slate-300"></div>
+                                    <p class="mt-[1em] text-left">Yes, we use cookies and tracking technologies to enhance your browsing experience and gather information about how you interact with our website. You can manage your cookie preferences in your browser settings.</p>
+                                </span>
+                            </button>
+                            <button onclick="unfoldFaq(this)" class="flex h-fit w-full flex-col overflow-hidden rounded-[1em]" style="box-shadow: 0px 2px 9px 1px rgba(31, 28, 65, 0.2)">
+                                <div class="flex w-full items-center justify-between rounded-[1em] p-[1em]">
+                                    <p class="text-left text-[1.2em]">Can I request access to or deletion of my personal data?</p>
+                                    <i class="fa-solid fa-plus text-[1.7em]"></i>
+                                </div>
+                                <span style="display: none" class="w-full flex-col bg-white px-[1em] pb-[1em]">
+                                    <div class="h-[.4em] w-full rounded-[1em] bg-slate-300"></div>
+                                    <p class="mt-[1em] text-left">Yes, you have the right to request access to your personal data or request its deletion in accordance with applicable data protection laws. Please contact our privacy team to submit your request.</p>
+                                </span>
+                            </button>
+                            <button onclick="unfoldFaq(this)" class="flex h-fit w-full flex-col overflow-hidden rounded-[1em]" style="box-shadow: 0px 2px 9px 1px rgba(31, 28, 65, 0.2)">
+                                <div class="flex w-full items-center justify-between rounded-[1em] p-[1em]">
+                                    <p class="text-left text-[1.2em]">What measures do you have in place to protect my data from unauthorized access?</p>
+                                    <i class="fa-solid fa-plus text-[1.7em]"></i>
+                                </div>
+                                <span style="display: none" class="w-full flex-col bg-white px-[1em] pb-[1em]">
+                                    <div class="h-[.4em] w-full rounded-[1em] bg-slate-300"></div>
+                                    <p class="mt-[1em] text-left">We employ industry-standard security measures, such as encryption and firewalls, to protect your data from unauthorized access. Additionally, access to your personal information is restricted to authorized personnel only.</p>
+                                </span>
+                            </button>
+                            <button onclick="unfoldFaq(this)" class="flex h-fit w-full flex-col overflow-hidden rounded-[1em]" style="box-shadow: 0px 2px 9px 1px rgba(31, 28, 65, 0.2)">
+                                <div class="flex w-full items-center justify-between rounded-[1em] p-[1em]">
+                                    <p class="text-left text-[1.2em]">How do you ensure the security of transactions made on your platform?</p>
+                                    <i class="fa-solid fa-plus text-[1.7em]"></i>
+                                </div>
+                                <span style="display: none" class="w-full flex-col bg-white px-[1em] pb-[1em]">
+                                    <div class="h-[.4em] w-full rounded-[1em] bg-slate-300"></div>
+                                    <p class="mt-[1em] text-left">We use secure payment gateways and encryption protocols to ensure the security of transactions made on our platform. Your payment information is handled with the highest level of security to protect your sensitive data.</p>
+                                </span>
+                            </button>
+                        </div>
+                    </div>
+
+                    <div id="about-support" class="mt-[2em] flex flex-col gap-[1em]">
+                        <h1 class="flex items-center gap-[.5em] text-[1.8em] font-medium"><i class="fa-solid fa-phone-volume text-[1.4em]"></i>SUPPORT & CONTACT</h1>
+                        <div class="grid w-full grid-cols-2 gap-[1.5em] gap-y-[1em]">
+                            <button onclick="unfoldFaq(this)" class="flex h-fit w-full flex-col overflow-hidden rounded-[1em]" style="box-shadow: 0px 2px 9px 1px rgba(31, 28, 65, 0.2)">
+                                <div class="flex w-full items-center justify-between rounded-[1em] p-[1em]">
+                                    <p class="text-left text-[1.2em]">How can I contact your support team?</p>
+                                    <i class="fa-solid fa-plus text-[1.7em]"></i>
+                                </div>
+                                <span style="display: none" class="w-full flex-col bg-white px-[1em] pb-[1em]">
+                                    <div class="h-[.4em] w-full rounded-[1em] bg-slate-300"></div>
+                                    <p class="mt-[1em] text-left">You can reach our support team by emailing support@example.com or by filling out the contact form on our website. We're here to assist you with any questions or concerns you may have.</p>
+                                </span>
+                            </button>
+                            <button onclick="unfoldFaq(this)" class="flex h-fit w-full flex-col overflow-hidden rounded-[1em]" style="box-shadow: 0px 2px 9px 1px rgba(31, 28, 65, 0.2)">
+                                <div class="flex w-full items-center justify-between rounded-[1em] p-[1em]">
+                                    <p class="text-left text-[1.2em]">Is support available in languages other than English?</p>
+                                    <i class="fa-solid fa-plus text-[1.7em]"></i>
+                                </div>
+                                <span style="display: none" class="w-full flex-col bg-white px-[1em] pb-[1em]">
+                                    <div class="h-[.4em] w-full rounded-[1em] bg-slate-300"></div>
+                                    <p class="mt-[1em] text-left">Currently, our primary support language is English. However, we strive to assist users in their preferred language whenever possible and may offer support in other languages depending on availability.</p>
+                                </span>
+                            </button>
+                            <button onclick="unfoldFaq(this)" class="flex h-fit w-full flex-col overflow-hidden rounded-[1em]" style="box-shadow: 0px 2px 9px 1px rgba(31, 28, 65, 0.2)">
+                                <div class="flex w-full items-center justify-between rounded-[1em] p-[1em]">
+                                    <p class="text-left text-[1.2em]">What are your typical response times for support inquiries?</p>
+                                    <i class="fa-solid fa-plus text-[1.7em]"></i>
+                                </div>
+                                <span style="display: none" class="w-full flex-col bg-white px-[1em] pb-[1em]">
+                                    <div class="h-[.4em] w-full rounded-[1em] bg-slate-300"></div>
+                                    <p class="mt-[1em] text-left">Our goal is to respond to support inquiries within 24 hours during regular business hours. However, response times may vary depending on the volume of inquiries received.</p>
+                                </span>
+                            </button>
+                        </div>
+                    </div>
+                    <div id="about-rules" class="mt-[2em] flex flex-col gap-[1em]">
+                        <h1 class="flex items-center gap-[.5em] text-[1.8em] font-medium"><i class="fa-solid fa-users text-[1.4em]"></i>RULES AND BEHAVIOR MANUAL</h1>
+                        <div class="grid w-full grid-cols-2 gap-[1.5em] gap-y-[1em]">
+                            <button onclick="unfoldFaq(this)" class="flex h-fit w-full flex-col overflow-hidden rounded-[1em]" style="box-shadow: 0px 2px 9px 1px rgba(31, 28, 65, 0.2)">
+                                <div class="flex w-full items-center justify-between rounded-[1em] p-[1em]">
+                                    <p class="text-left text-[1.2em]">What are the guidelines for interacting with other users on the platform?</p>
+                                    <i class="fa-solid fa-plus text-[1.7em]"></i>
+                                </div>
+                                <span style="display: none" class="w-full flex-col bg-white px-[1em] pb-[1em]">
+                                    <div class="h-[.4em] w-full rounded-[1em] bg-slate-300"></div>
+                                    <p class="mt-[1em] text-left">We encourage respectful and constructive interactions with other users. Harassment, hate speech, bullying, or any form of disrespectful behavior towards others will not be tolerated.</p>
+                                </span>
+                            </button>
+                            <button onclick="unfoldFaq(this)" class="flex h-fit w-full flex-col overflow-hidden rounded-[1em]" style="box-shadow: 0px 2px 9px 1px rgba(31, 28, 65, 0.2)">
+                                <div class="flex w-full items-center justify-between rounded-[1em] p-[1em]">
+                                    <p class="text-left text-[1.2em]">What actions can result in disciplinary measures or account suspension?</p>
+                                    <i class="fa-solid fa-plus text-[1.7em]"></i>
+                                </div>
+                                <span style="display: none" class="w-full flex-col bg-white px-[1em] pb-[1em]">
+                                    <div class="h-[.4em] w-full rounded-[1em] bg-slate-300"></div>
+                                    <p class="mt-[1em] text-left">Violating our rules and behavior guidelines, engaging in fraudulent activities, or repeatedly disregarding community standards may result in disciplinary measures, including account suspension or termination.</p>
+                                </span>
+                            </button>
+                            <button onclick="unfoldFaq(this)" class="flex h-fit w-full flex-col overflow-hidden rounded-[1em]" style="box-shadow: 0px 2px 9px 1px rgba(31, 28, 65, 0.2)">
+                                <div class="flex w-full items-center justify-between rounded-[1em] p-[1em]">
+                                    <p class="text-left text-[1.2em]">Are there specific rules for naming and describing card designs?</p>
+                                    <i class="fa-solid fa-plus text-[1.7em]"></i>
+                                </div>
+                                <span style="display: none" class="w-full flex-col bg-white px-[1em] pb-[1em]">
+                                    <div class="h-[.4em] w-full rounded-[1em] bg-slate-300"></div>
+                                    <p class="mt-[1em] text-left">Yes, card names and descriptions should adhere to our guidelines for appropriate content. Any content deemed offensive, discriminatory, or inappropriate will be removed.</p>
+                                </span>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <footer class="relative flex h-[6em] min-h-[6em] w-full flex-col">
+            <div class="h-full w-full bg-primaryPurple">
+                <div class="relative flex h-[2em] w-full items-end justify-between overflow-visible bg-brickSet1">
+                    <div class="h-[175%] w-[6em] rounded-[.5em] bg-brickSet1"></div>
+                    <div class="relative top-[75%] h-[175%] w-[6em] rounded-[.5em] bg-brickSet1"></div>
+                    <div class="h-[175%] w-[6em] rounded-[.5em] bg-brickSet1"></div>
+                    <div class="relative top-[75%] h-[175%] w-[6em] rounded-[.5em] bg-brickSet1"></div>
+                    <div class="h-[175%] w-[6em] rounded-[.5em] bg-brickSet1"></div>
+                    <div class="relative top-[75%] h-[175%] w-[6em] rounded-[.5em] bg-brickSet1"></div>
+                    <div class="h-[175%] w-[6em] rounded-[.5em] bg-brickSet1"></div>
+                    <div class="relative top-[75%] h-[175%] w-[6em] rounded-[.5em] bg-brickSet1"></div>
+                    <div class="h-[175%] w-[6em] rounded-[.5em] bg-brickSet1"></div>
+                    <div class="relative top-[75%] h-[175%] w-[6em] rounded-[.5em] bg-brickSet1"></div>
+                    <div class="h-[175%] w-[6em] rounded-[.5em] bg-brickSet1"></div>
+                    <div class="relative top-[75%] h-[175%] w-[6em] rounded-[.5em] bg-brickSet1"></div>
+                    <div class="h-[175%] w-[6em] rounded-[.5em] bg-brickSet1"></div>
+                </div>
+            </div>
+        </footer>
+
+        <script src="JS/private/faq/faq.js"></script>
+    </body>
+</html>

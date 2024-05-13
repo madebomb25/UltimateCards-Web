@@ -1,0 +1,418 @@
+.castle-holder {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap:7em;
+    font-size:16px;
+    position:absolute;
+    top:45%;
+    z-index: 2;
+}
+
+.main-wall {
+    display:flex;
+    flex-direction: column;
+    position: relative;
+    animation:hover 2s ease-in-out infinite;
+
+    width:35em;
+    height:12em;
+    
+}
+
+.main-wall .wall {
+    display:flex;
+    justify-content: space-between;
+    align-items: center;
+    width:100%;
+    height:100%;
+    background-color: #524AA6;
+
+}
+
+.main-wall .brick-lane {
+    display:flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    position: relative;
+
+    width:100%;
+    height:2.5em;
+    border-radius: 1em;
+}
+
+.brick-lane .brick {
+    width:5em;
+    height:190%;
+    position:relative;
+    z-index: 2;
+    transition: background-color .5s ease-in-out;
+}
+
+.brick-lane .brick.top {
+    border-radius:.5em .5em 0 0;
+}
+
+.brick-lane .brick.bottom {
+    top:90%;
+    border-radius:0 0 .5em .5em;
+}
+
+.set-2 .brick:nth-child(1) {
+    border-radius:.5em .5em 0 .5em;
+}
+
+.set-2 .brick:nth-child(5) {
+    border-radius:.5em .5em .5em 0;
+}
+
+.brick-lane.set-1 {
+    animation: linearBrick 3s infinite;
+}
+
+.main-wall .set-1, .main-wall .set-1 div {
+    background-color:#857CE6;
+}
+
+.main-wall .set-2, .main-wall .set-2 div {
+    background-color: #9E9FDD;
+}
+
+
+
+.main-wall .text-holder {
+    display:flex;
+    justify-content: space-around;
+    width:100%;
+    height:2.8em;
+}
+
+.main-wall .text-holder .text-box {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    height:100%;
+    font-size: 1em;
+}
+
+.main-wall .text-holder .text-box h1 {
+    color:white;
+    font-family: Archive, sans-serif;
+    font-weight: normal;
+    font-size: 2em;
+}
+
+.main-wall .text-holder .middle {
+    align-items: flex-end;
+}
+
+.main-wall .text-holder .middle span {
+    padding:.2em .2em;
+    border-radius: .3em;
+    background-color: white;
+    color:#5E17EB;
+}
+
+.main-wall .tower {
+    z-index: -1;
+    position: absolute;
+}
+
+.main-wall .tower img {
+    width:11.5em;
+}
+
+.main-wall .tower:nth-child(1) {
+    display: flex;
+    justify-content: center;
+
+    position: absolute;
+
+    top:-12.5em;
+    left:-.5em;
+}
+
+.main-wall .tower .banner {
+    display:flex;
+    justify-content: center;
+    width:5em;
+    height:5.9em;
+    top:27%;
+    background-color:#7662C4;
+    position:absolute;
+    clip-path: polygon(100% 0, 100% 85%, 50% 100%, 0 85%, 0 0);
+}
+
+.main-wall .tower .banner img {
+    position: absolute;
+    width:3.5em;
+    top:.8em;
+    animation:hammer-smash 2s infinite;
+}
+
+.main-wall .middle-dragon-card {
+    display:flex;
+    justify-content: center;
+    width:8em;
+    height:9em;
+    top:-8em;
+    left:41%;
+    border-radius: 1.5em 1.5em 0 0;
+    background-color: #9E9FDD;
+    position: absolute;
+    transform: rotate(8deg);
+    z-index: -1;
+    animation: dragon-hover 5s ease-in-out infinite;
+}
+
+.main-wall .middle-dragon-card img {
+    position: absolute;
+    top:1.7em;
+    height:4em;
+}
+
+.balls-holder {
+    width:10em;
+    height:1em;
+    top:-13em;
+    left:5em;
+    border-radius: 1em;
+    position: absolute;
+    z-index: 1;
+}
+
+.balls-holder .ball {
+    position:absolute;
+    width:4em;
+    height:4em;
+    border-radius: 50%;
+    border: .3em solid #987de3;
+}
+
+.balls-holder .ball:nth-child(1) {
+    top:6em;
+    left:5em;
+    animation:ballHover1 4s ease-in-out infinite 1s;
+}
+
+.balls-holder .ball:nth-child(2) {
+    top:10em;
+    animation: ballHover2 3s ease-in-out infinite;
+}
+
+.balls-holder .ball:nth-child(3) {
+    top:5em;
+    left:-5em;
+    animation: ballHover3 4s ease-in-out infinite;
+}
+
+.main-wall .tower:nth-child(3) {
+    top:-9.5em;
+    right:-.5em;
+    transform: rotate(8deg);
+    animation: towerShift 5s cubic-bezier(.4, 0, 0, .8)  infinite;
+}
+
+.hand-left {
+    display: flex;
+    position:absolute;
+    left:-14em;
+    bottom:-.8em;
+
+    height:14em;
+    transform: rotate(-18deg);
+    z-index:-1;
+    animation:hand-left 5s ease-in-out infinite;
+}
+
+.hand-right {
+    display: flex;
+    position:absolute;
+    right:-8em;
+    bottom:0;
+
+    height:17em;
+    transform: rotate(35deg);
+    z-index:-1;
+    animation:hand-right 6s ease-in-out infinite;
+}
+
+.hand-right .hammer {
+    width:8.5em;
+    top:-10em;
+    left:-1em;
+    position: absolute;
+    z-index: -2;
+    animation:hammer 7s ease-in-out infinite;
+}
+
+@keyframes linearBrick {}
+
+@keyframes hover {
+    0% { 
+        transform: translateY(0); 
+    }
+    50% { 
+        transform: translateY(1em); 
+    }
+    100% {
+        transform: translateY(0); 
+    }   
+}
+
+@keyframes ballHover1 {
+    0% { 
+        transform: translate(0, 0); 
+    }
+    50% { 
+        transform: translate(-.5em,-2em); 
+    }
+    100% {
+        transform: translate(0, 0); 
+    }   
+}
+
+@keyframes ballHover2 {
+    0% { 
+        transform: translate(0, 0); 
+    }
+    50% { 
+        transform: translate(1em, 1.1em); 
+    }
+    100% {
+        transform: translateY(0, 0); 
+    }   
+}
+
+@keyframes ballHover3 {
+    0% { 
+        transform: translateY(0, 0); 
+    }
+    50% { 
+        transform: translate(-.5em, 1.5em); 
+    }
+    100% {
+        transform: translateY(0, 0); 
+    }   
+}
+
+@keyframes towerShift {
+    0% {
+        transform: rotate(8deg);
+    }
+
+    50% {
+        transform:rotate(4deg);
+    }
+
+    100% {
+        transition: rotate(8deg);
+    }
+}
+
+@keyframes hand-right {
+    0% {
+        transform: translate(0) rotate(35deg);
+        
+    }
+
+    50% {
+        transform: translate(2em, 2em) rotate(60deg);
+    }
+
+    100% {
+        transform: translate(0) rotate(35deg);
+    }
+}
+
+@keyframes hand-left {
+    0% {
+        transform: translate(0) rotate(-18deg);
+        
+    }
+
+    50% {
+        transform: translate(-3em, -1em) rotate(-10deg);
+    }
+
+    100% {
+        transform: translate(0) rotate(-18deg);
+    }
+}
+
+@keyframes hammer {
+    0% {
+        transform: translate(0) rotate(-40deg);
+        
+    }
+
+    60% {
+        transform: translate(1em, 5.5em) rotate(15deg);
+    }
+
+    100% {
+        transform: translate(0) rotate(-40deg);
+    }
+}
+
+@keyframes dragon-hover {
+    0% { 
+        transform: translateY(0) rotate(8deg); 
+    }
+    50% { 
+        transform: translateY(.5em) rotate(5deg); 
+    }
+    100% {
+        transform: translateY(0) rotate(8deg); 
+    } 
+}
+
+/*
+Animación que haga que los ladrillos cambien de color
+en linea. Osea, 1 a 1 de izquierda a derecha.
+*/
+
+
+@media screen and (max-width:1200px) {
+    .castle-holder {
+        font-size: 13px;
+    }
+
+    .hero-button {
+        font-size: 13px;
+    }
+}
+
+@media screen and (max-width:1000px) {
+    .castle-holder {
+        font-size: 10px;
+    }
+
+    .hero-button {
+        font-size: 10px;
+    }
+}
+
+@media screen and (max-width:800px) {
+    .castle-holder {
+        font-size: 9px;
+    }
+
+    .hero-button {
+        font-size: 9px;
+    }
+
+    .hand-right {
+        display: none;
+    }
+
+    .hand-left {
+        display: none;
+    }
+}
+
+@media screen and (max-width:600px) {
+    .castle-holder {
+        font-size: 8px;
+    }
+}

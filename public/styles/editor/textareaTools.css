@@ -1,0 +1,62 @@
+.description-manager .text-modifiers {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    position: relative;
+
+    width: 3.55em;
+    height: 3.55em;
+    font-size: 1em;
+    border-radius: 1.25em;
+    background-color: rgb(238, 238, 238);
+    overflow: hidden;
+    border: transparent;
+    cursor: pointer;
+    transition: background-color 0.4s ease;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    appearance: none;
+    margin: 0;
+}
+
+#desc-expand:hover,
+#desc-increase-font:hover {
+    background-color: #9bd613;
+}
+
+#desc-contract:hover,
+#desc-decrease-font:hover {
+    background-color: rgb(193, 8, 8);
+}
+
+.description-manager input[type="color"] {
+    width: 100%;
+    height: 100%;
+    cursor: pointer;
+    opacity: 0;
+    z-index: 1;
+}
+
+.description-manager input[type="color"]::-webkit-color-swatch-wrapper {
+    padding: 0;
+}
+
+.description-manager input[type="color"]::-webkit-color-swatch {
+    border: none;
+}
+
+@media screen and (max-width: 460px), (max-height: 300px) {
+    .description-manager {
+        font-size: 10px;
+        z-index: 5;
+        border-right: none;
+        border-left: none;
+        border-top: none;
+        border-radius: 0;
+        border-radius: 0.1em;
+        transform: translateY(0.5em);
+    }
+}

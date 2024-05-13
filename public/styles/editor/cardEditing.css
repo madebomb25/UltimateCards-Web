@@ -1,0 +1,222 @@
+/* GENERAL SETTINGS */
+
+.card {
+    display: flex;
+    overflow: hidden;
+    z-index: 1;
+    font-size: 16px;
+}
+
+.card-border {
+    padding: 0.5em;
+    background-color: #dbdbdb;
+    border-radius: 0.6em;
+}
+
+.card-box {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+    border-radius: 0.2em;
+
+    width: 19.35em; /* 19 em original*/
+    height: 31em; /*31.563em original height, that .563 causes SVG artifacts. Needs to be a round number*/
+
+    border: 1px solid rgb(161, 161, 161);
+    background-color: #5f3d0c;
+    overflow: hidden;
+    transition: background-image 0.3s ease;
+    cursor: cell;
+
+    /*background-position:center breaks SVGs, need to repair this!*/
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.title-box {
+    display: flex;
+    align-items: center;
+    position: absolute;
+    gap: 0.5em;
+    left: 0;
+    height: 3.25em;
+    width: 75%;
+    border-bottom-right-radius: 1.25em;
+
+    background-color: #61e174;
+    cursor: pointer;
+    overflow: hidden;
+}
+
+.title-box input[type="text"] {
+    width: 90%;
+    font-family: "Rajdhani";
+    font-size: 1.43em;
+    overflow: hidden;
+    background: none;
+    border: none;
+    z-index: 1;
+    font-weight: 600;
+}
+
+.title-box input:focus {
+    outline: none;
+}
+
+.title-box img {
+    width: 2.5em;
+    height: 2.5em;
+    border-radius: 50%;
+    background-color: rgb(209, 209, 209);
+    box-shadow: 1px 1px 5px;
+    margin-left: 0.4em;
+    z-index: 1;
+}
+
+.central-box {
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    width: 92%;
+    height: 15em;
+    /**height:15.2em;*/
+    margin-top: 4.3em;
+    position: relative;
+    border-radius: 1.25em;
+}
+
+.rank-box {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    padding: 0.2em 0.4em 0 0.4em;
+    height: 3em;
+    top: -7%;
+    right: 0;
+    position: absolute;
+    border-radius: 0.46em 0.46em 0 0;
+    font-size: 0.75em;
+    background-color: white;
+    outline: none;
+    font-weight: 700;
+}
+
+.rank2-box {
+    display: flex;
+    text-align: center;
+    left: 0.2em;
+    position: absolute;
+    padding: 0.1em 1.3em;
+    font-size: 1em;
+    font-weight: 700;
+    background-color: white;
+    transform: rotate(270deg);
+    transform-origin: 0.8em;
+    z-index: 2;
+    outline: none;
+    border-radius: 1.25em 0 0.8em 0;
+}
+
+.central-box .images {
+    display: flex;
+    position: relative;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+    background-color: black;
+    overflow: visible;
+    border: 0.4em solid white;
+    font-size: 0.9em;
+    border-radius: 1.25em;
+    z-index: 1;
+    transition: background-image 0.3s ease;
+    background-image: url(cardessentials/background3.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.central-box .images .avatar {
+    display: flex;
+    position: absolute;
+    width: 100%;
+    bottom: 0;
+    cursor: grab;
+}
+
+.description {
+    display: flex;
+    margin-top: 0.7em;
+    width: 86%;
+    height: 6em;
+    resize: none;
+    background-color: transparent;
+    color: white;
+    font-size: 0.95em;
+    border: none;
+    overflow: hidden;
+    /*Si una de las palabras es más grande que el espacio disponible (al ser justify no se rompe) el contenedor peta y el texto se sobresale de este.*/
+    text-align: left;
+    /*Añadir word-break soluciona el problema, ya que si una palabra es más grande que el espacio disponible, esta se partirá.*/
+    word-wrap: break-word;
+    font-family: "Roboto", sans-serif;
+}
+
+.description:focus {
+    outline: none;
+}
+
+.card-footer {
+    display: flex;
+    justify-content: space-between;
+    position: absolute;
+
+    width: 87%;
+    height: 3.8em;
+    bottom: 0;
+}
+
+/*
+Cant be added properly in Tailwind
+*/
+.card-footer .stats-box .damage {
+    border-right: 1px solid black;
+}
+
+.card-footer .stats-box .health {
+    border-left: 1px solid black;
+}
+
+.card-footer .stats-box input[type="color"] {
+    display: flex;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    border: none;
+    outline: none;
+    opacity: 0;
+    cursor: cell;
+}
+
+.card-footer .icon-box {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 0.6em;
+}
+
+.card-footer .icon-box div {
+    display: flex;
+    position: relative;
+    width: 2.8em;
+    height: 2.8em;
+    border-radius: 0.9em;
+    cursor: pointer;
+    overflow: hidden;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-color: black;
+}

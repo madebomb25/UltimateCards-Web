@@ -1,0 +1,160 @@
+.background-manager {
+    display: flex;
+    align-items: center;
+    position: absolute;
+    flex-direction: column;
+
+    gap: 0.5em;
+    font-size: 16px;
+    z-index: -1;
+    border: 0.5em solid rgb(219, 219, 219);
+    background-color: #ffffff;
+    border-radius: 0.6em;
+    transition: transform 0.2s ease;
+}
+
+.background-manager span {
+    display: block;
+    width: 80%;
+    padding: 0.2em 0;
+    background-color: #808080;
+    border-radius: 1.25em;
+}
+
+.color-holder {
+    display: flex;
+    justify-content: center;
+    gap: 1.4em;
+
+    width: 90%;
+    margin: 2em 0 1em 0;
+    position: relative;
+    flex-wrap: wrap;
+}
+
+.color-holder.extended {
+    overflow-y: scroll;
+    height: 71%;
+}
+
+.color-holder div,
+.color-holder button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+
+    width: 3.55em;
+    height: 3.55em;
+    font-size: 1em;
+    border-radius: 1.25em;
+    overflow: hidden;
+    background-color: rgb(189, 189, 188);
+    border: transparent;
+    cursor: pointer;
+}
+
+.color-holder input {
+    width: 100%;
+    height: 100%;
+    border: none;
+    background: transparent;
+    color: transparent;
+    outline: none;
+    font-size: 0;
+    opacity: 0;
+    cursor: pointer;
+    position: absolute;
+}
+
+.color-holder div i,
+.color-holder button i {
+    display: flex;
+    font-size: 1.25em;
+    transition: color 0.4s ease;
+}
+
+.color-holder .background-picker i,
+.color-holder button i {
+    font-size: 1.8em;
+}
+
+.color-holder .portrait-picker i {
+    font-size: 1.56em;
+}
+
+.color-holder div input[type="color"]::-webkit-color-swatch-wrapper {
+    padding: 0;
+}
+
+.color-holder div input[type="color"]::-webkit-color-swatch {
+    border: none;
+}
+
+.toggle-portrait,
+.reset-portrait,
+.zoom-in-portrait,
+.zoom-out-portrait {
+    transition: background-color 0.4s ease;
+}
+
+.toggle-portrait:hover,
+.zoom-out-portrait:hover {
+    background-color: rgb(193, 8, 8);
+}
+
+.reset-portrait:hover,
+.zoom-in-portrait:hover {
+    background-color: #9bd613;
+}
+
+.background-picker:hover i,
+.portrait-picker:hover i {
+    color: rgb(68, 68, 68);
+}
+
+/*BACKGROUND DEMO's*/
+
+.background-demos {
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+    flex-wrap: wrap;
+    width: 90%;
+    overflow-y: scroll;
+    overflow-x: hidden;
+    transform: translateX(0.1em); /*Offset*/
+}
+
+.background-demos div {
+    width: 5em;
+    height: 5em;
+    border-radius: 1.25em;
+    margin: 1em;
+    cursor: pointer;
+    transition: 0.3s;
+    background-color: #5f3d0c;
+    /*If there isnt a delay when changing div colors, changing very fast a color makes the app really slow*/
+}
+
+.background-demos div:hover {
+    transform: scale(1.1);
+}
+
+@media screen and (max-width: 800px), (max-height: 600px) {
+    .background-manager {
+        font-size: 14px !important;
+
+        /*Parsing again the border fixes rendering errors on animation*/
+        border: 0.5em solid rgb(219, 219, 219);
+    }
+}
+
+@media screen and (max-width: 460px), (max-height: 300px) {
+    .background-manager {
+        font-size: 11px !important;
+        border: none;
+        border-radius: 0.1em;
+        z-index: 2;
+    }
+}

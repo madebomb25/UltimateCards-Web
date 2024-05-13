@@ -1,0 +1,431 @@
+<!doctype html>
+<html lang="es">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+        <link rel="stylesheet" href="styles/global/output.css" />
+
+        <link rel="stylesheet" href="styles/private/index/index.css" />
+        <link rel="stylesheet" href="styles/global/globalStyles.css" />
+        <link rel="stylesheet" href="styles/global/colors.css" />
+        <link rel="stylesheet" href="styles/global/circleBackground.css" />
+        <link rel="stylesheet" href="styles/global/floatingCards.css" />
+        <link rel="stylesheet" href="styles/global/fonts.css" />
+        <link rel="stylesheet" href="styles/private/index/hero.css" />
+        <link rel="stylesheet" href="styles/private/index/minilogin.css" />
+
+        <link rel="stylesheet" href="styles/editor/elements.css" />
+        <link rel="stylesheet" href="styles/editor/cardEditing.css" />
+        <link rel="stylesheet" href="styles/editor/tools.css" />
+        <link rel="stylesheet" href="styles/editor/heroPatterns.css" />
+        <link rel="stylesheet" href="styles/editor/foregroundTools.css" />
+        <link rel="stylesheet" href="styles/editor/textareaTools.css" />
+
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+
+        <link rel="icon" href="styles/img/logo.png" type="image/png" />
+
+        <script src="JS/libraries/html2image.js"></script>
+        <script src="https://kit.fontawesome.com/f3a29394bf.js" crossorigin="anonymous"></script>
+
+        <title>Ultimate Cards</title>
+    </head>
+    <body class="flex flex-col items-center">
+        <section class="combined-header absolute z-50 flex w-full flex-col items-center">
+            <header class="relative flex w-[75%] items-center justify-between py-[2em]">
+                <div class="logo flex items-center gap-[1em]">
+                    <img src="styles/img/logo.png" class="h-[3em]" />
+                    <h1 class="text-[27px]">ULTIMATE <span class="relative text-alternate1">CARDS</span></h1>
+                </div>
+                <nav class="flex items-center gap-[1em]">
+                    <div class="flex gap-[1em]">
+                        <a href="collections.html" class="">PROFILE</a>
+                        <a href="faq.html" class="">FAQ</a>
+                        <a href="aboutus.html" class="">ABOUT US</a>
+                    </div>
+
+                    <a id="login-button" href="login.html" class="text-[1em]"><i class="fa-solid fa-right-to-bracket text-[1.5em]"></i></a>
+                    <button style="display: none" id="logout-button" class="text-[1em]"><i class="fa-solid fa-door-open text-[1.5em]"></i></button>
+                    <i class="ham-menu fa-solid fa-bars"></i>
+                </nav>
+            </header>
+            <span class="separator h-[.3em] w-[70%] rounded-[.5em]"></span>
+        </section>
+
+        <section class="hero-holder">
+            <div class="castle-holder">
+                <div class="main-wall">
+                    <div class="tower">
+                        <img src="styles/img/castle/tower.png" alt="" />
+                        <div class="banner">
+                            <img src="styles/img/castle/whitehammer.png" alt="" />
+                        </div>
+                    </div>
+
+                    <div class="middle-dragon-card">
+                        <img src="styles/img/castle/dragonlightpurple.png" alt="" />
+                    </div>
+
+                    <div class="tower">
+                        <img src="styles/img/castle/tower.png" alt="" />
+                    </div>
+
+                    <div class="hand-left">
+                        <img src="styles/img/castle/hand1.png" alt="" />
+                        <div class="balls-holder">
+                            <img src="styles/img/castle/FireMage_33.png" class="ball" />
+                            <img src="styles/img/castle/BloodMage_17.png" class="ball" />
+                            <img src="styles/img/castle/Hunter_9.png" class="ball" />
+                        </div>
+                    </div>
+
+                    <div class="hand-right">
+                        <img src="styles/img/castle/hand2.png" alt="" />
+                        <img src="styles/img/castle/hammer.png" class="hammer" />
+                    </div>
+
+                    <div class="brick-lane set-1">
+                        <div class="brick top"></div>
+                        <div class="brick bottom"></div>
+                        <div class="brick top"></div>
+                        <div class="brick bottom"></div>
+                        <div class="brick top"></div>
+                    </div>
+                    <div class="wall">
+                        <div class="text-holder">
+                            <div class="text-box">
+                                <h1>BUILD</h1>
+                            </div>
+                            <div class="text-box middle">
+                                <h1>THE <span>ULTIMATE</span></h1>
+                            </div>
+                            <div class="text-box">
+                                <h1>DECK!</h1>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="brick-lane set-2">
+                        <div class="brick top"></div>
+                        <div class="brick bottom"></div>
+                        <div class="brick top"></div>
+                        <div class="brick bottom"></div>
+                        <div class="brick top"></div>
+                    </div>
+                </div>
+                <div class="hero-button">
+                    <a href="#card">START</a>
+                    <img src="styles/img/castle/dragonwing-left.png" />
+                    <img src="styles/img/castle/dragonwing-right.png" />
+                </div>
+            </div>
+            <div class="floating-cards">
+                <div class="row">
+                    <img src="styles/img/marccartas3.PNG" />
+                    <img src="styles/img/scoobydoo.png" />
+                    <img src="styles/img/sonic.png" />
+                    <img src="styles/img/marccartas3.PNG" />
+                    <img src="styles/img/scoobydoo.png" />
+                    <img src="styles/img/sonic.png" />
+                    <img src="styles/img/marccartas3.PNG" />
+                    <img src="styles/img/scoobydoo.png" />
+                    <img src="styles/img/sonic.png" />
+                    <img src="styles/img/marccartas3.PNG" />
+                    <img src="styles/img/scoobydoo.png" />
+                    <img src="styles/img/sonic.png" />
+                </div>
+                <div class="row">
+                    <img src="styles/img/marccartas3.PNG" />
+                    <img src="styles/img/scoobydoo.png" />
+                    <img src="styles/img/sonic.png" />
+                    <img src="styles/img/marccartas3.PNG" />
+                    <img src="styles/img/scoobydoo.png" />
+                    <img src="styles/img/sonic.png" />
+                    <img src="styles/img/marccartas3.PNG" />
+                    <img src="styles/img/scoobydoo.png" />
+                    <img src="styles/img/sonic.png" />
+                    <img src="styles/img/marccartas3.PNG" />
+                    <img src="styles/img/scoobydoo.png" />
+                    <img src="styles/img/sonic.png" />
+                </div>
+                <div class="row">
+                    <img src="styles/img/marccartas3.PNG" />
+                    <img src="styles/img/scoobydoo.png" />
+                    <img src="styles/img/sonic.png" />
+                    <img src="styles/img/marccartas3.PNG" />
+                    <img src="styles/img/scoobydoo.png" />
+                    <img src="styles/img/sonic.png" />
+                    <img src="styles/img/marccartas3.PNG" />
+                    <img src="styles/img/scoobydoo.png" />
+                    <img src="styles/img/sonic.png" />
+                    <img src="styles/img/marccartas3.PNG" />
+                    <img src="styles/img/scoobydoo.png" />
+                    <img src="styles/img/sonic.png" />
+                </div>
+            </div>
+        </section>
+
+        <section class="editor-playground relative flex h-screen w-full flex-col items-center justify-center overflow-hidden">
+            <div class="absolute top-[2em] flex w-full items-center justify-between">
+                <div class="switch-card-mode-box relative ml-[4em] flex items-center justify-center gap-[1em]">
+                    <div class="switch-card-mode flex justify-center overflow-hidden rounded-[1em] bg-[#ece7f8]">
+                        <button class="z-10 cursor-pointer rounded-[1em] border-none bg-alternate1 p-[1em] text-center text-[1.3em] italic text-white active:bg-[#200851]">NORMAL</button>
+                        <button class="z-10 cursor-pointer rounded-[1em] border-none p-[1em] text-center text-[1.3em]">CUSTOM</button>
+                    </div>
+                    <i class="fa-solid fa-circle-info cursor-pointer text-[1.4em]"></i>
+                    <div class="help absolute bottom-[-12em] left-0 hidden w-[20em] flex-col items-center gap-[1em] rounded-[1em] bg-[#f5f0ff] p-[1em]">
+                        <p><span class="font-bold">Normal</span> - Limited customization, can be used in online modes</p>
+                        <div class="h-[.25em] w-full rounded-[.5em] bg-[#d3ccec]"></div>
+                        <p><span class="font-bold">Custom</span> - Extended customization, can't be used in online modes</p>
+                    </div>
+                </div>
+                <div class="mr-[4em] flex w-[25em] flex-col items-center gap-[.7em]">
+                    <div class="flex w-[95%] justify-between">
+                        <button id="alternate-foreground-opener" class="flex h-[1em] w-[1em] items-center justify-center rounded-[.5em] p-[1em] text-[1.8em]">
+                            <i class="fa-solid fa-person text-[#4B448B]"></i>
+                        </button>
+                        <button id="alternate-background-opener" class="flex h-[1em] w-[1em] items-center justify-center rounded-[.5em] p-[1em] text-[1.8em]">
+                            <i class="fa-solid fa-mountain-sun text-[#4B448B]"></i>
+                        </button>
+                        <button id="alternate-skill-opener" class="flex h-[1em] w-[1em] items-center justify-center rounded-[.5em] p-[1em] text-[1.8em]">
+                            <i class="fa-solid fa-book-skull text-[#4B448B]"></i>
+                        </button>
+                        <button id="alternate-title-opener" class="flex h-[1em] w-[1em] items-center justify-center rounded-[.5em] p-[1em] text-[1.8em]">
+                            <i class="fa-solid fa-heading text-[#4B448B]"></i>
+                        </button>
+                        <button id="alternate-desc-opener" class="flex h-[1em] w-[1em] items-center justify-center rounded-[.5em] p-[1em] text-[1.8em]">
+                            <i class="fa-solid fa-paragraph text-[#4B448B]"></i>
+                        </button>
+                    </div>
+                    <span class="separator h-[.3em] w-full rounded-[.5em] bg-[#524aa6]"></span>
+                </div>
+            </div>
+
+            <div class="absolute bottom-[10em] right-[1em] flex flex-col gap-[2em]">
+                <button id="download-card" class="h-[2.5em] w-[2.5em] rounded-[.5em] bg-alternate1 text-[2em] text-white">
+                    <i class="fa-solid fa-file-arrow-down"></i>
+                </button>
+                <button id="upload-card" class="h-[2.5em] w-[2.5em] rounded-[.5em] bg-alternate1 text-[2em] text-white">
+                    <i class="fa-solid fa-cloud-arrow-up"></i>
+                </button>
+            </div>
+
+            <div class="main-holder">
+                <div class="card" id="card">
+                    <div class="card-border">
+                        <div class="card-box">
+                            <div class="title-box">
+                                <img src="styles/editor/cardessentials/iceicon.png" alt="" class="titleImg" />
+                                <input type="text" value="MR HEISENMARC" class="title" />
+                            </div>
+
+                            <div class="central-box">
+                                <p class="rank-box">TIER I</p>
+                                <p class="rank2-box">LEGEND</p>
+
+                                <div class="images">
+                                    <img src="styles/editor/cardessentials/mrheisenmarc.png" alt="" class="avatar" />
+                                </div>
+                            </div>
+
+                            <p class="description italic text-white">Fusión entre MR WHITE y MARC. El objetivo de este ser es destruir a todos los contables del multiverso y a sus versiones alternas.</p>
+                            <div class="card-footer">
+                                <div class="icon-box">
+                                    <div id="skill-icon"></div>
+                                </div>
+                                <div class="stats-box relative right-[0] flex h-full w-[8.3em] items-center justify-center overflow-hidden rounded-t-[1.2em]" style="background-color: #61e174">
+                                    <!--
+                                        the real font size is 23,2 because of the 1.45em of the parent font, 
+                                        1.45 * 16 (base font) = 23,2
+                                    -->
+                                    <input type="color" />
+                                    <input type="text" value="1" maxlength="1" class="damage z-10 h-[1.85em] w-[2.45em] rounded-l-[.39em] border-r border-[black] bg-[#b93a3a] text-center text-[1.45em] outline-none" />
+                                    <input type="text" value="1" maxlength="1" class="health z-10 h-[1.85em] w-[2.45em] rounded-r-[.39em] border-l border-[black] bg-[#3eb15b] text-center text-[1.45em] outline-none" />
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div id="description-menu" style="display: none; transition: transform 0.2s ease" class="absolute h-[96%] w-[95%] flex-col items-center rounded-[.6em] border-[.5em] border-[#dbdbdb] bg-white">
+                    <div class="description-manager my-[2em] flex min-h-min w-[80%] flex-wrap content-start justify-center gap-[1.4em]">
+                        <div class="text-modifiers desc-background">
+                            <input id="desc-background-color" type="color" value="${cardColors.description.background}" />
+                            <i class="fa-solid fa-brush absolute"></i>
+                        </div>
+
+                        <button class="text-modifiers" id="desc-expand">
+                            <i class="fa-solid fa-maximize absolute"></i>
+                        </button>
+
+                        <button class="text-modifiers" id="desc-contract">
+                            <i class="fa-solid fa-minimize absolute"></i>
+                        </button>
+
+                        <div class="text-modifiers desc-foreground">
+                            <input id="desc-font-color" type="color" value="${cardColors.description.foreground}" />
+                            <i class="fa-solid fa-font absolute"></i>
+                        </div>
+
+                        <button class="text-modifiers" id="desc-increase-font">
+                            <i class="fa-solid fa-arrow-up-a-z absolute"></i>
+                        </button>
+
+                        <button class="text-modifiers" id="desc-decrease-font">
+                            <i class="fa-solid fa-arrow-down-a-z absolute"></i>
+                        </button>
+                    </div>
+                    <span class="w-[80%] rounded-[1.25em] bg-[#808080] py-[.2em]"></span>
+                    <textarea id="desc-textarea" spellcheck="false" maxlength="125" placeholder="Write an awesome description..." class="my-[2em] h-[90%] w-[80%] resize-none rounded-[.5em] border-[.2em] border-[#808080] bg-white p-[.5em] outline-none"></textarea>
+                </div>
+            </div>
+
+            <div id="skill-tower" class="animate__animated animate__faster absolute bottom-0 hidden h-[90%] w-[30em] flex-col items-center bg-primaryPurple">
+                <div class="relative top-[1.5em] flex w-[105%] justify-center">
+                    <div class="z-0 flex h-[3em] w-full rounded-[50%] bg-brickSet1">
+                        <div class="h-1/2 w-full bg-brickSet1"></div>
+                    </div>
+
+                    <div class="absolute bottom-[1em] z-20 flex w-full items-end justify-between">
+                        <div class="h-[5em] w-[4em] rounded-[1em] bg-brickSet1"></div>
+                        <div class="h-[4em] w-[4em] rounded-[1em] bg-brickSet1"></div>
+                        <div class="h-[3em] w-[4em] rounded-[1em] bg-brickSet1"></div>
+                        <div class="h-[4em] w-[4em] rounded-[1em] bg-brickSet1"></div>
+                        <div class="h-[5em] w-[4em] rounded-[1em] bg-brickSet1"></div>
+                    </div>
+
+                    <div class="absolute top-[-2em] z-10 flex h-[2.5em] w-full rounded-[50%] bg-[#3e2370]"></div>
+
+                    <div class="absolute bottom-[3em] h-[3.5em] w-full rounded-[50%] bg-[#4B448B]"></div>
+
+                    <div class="absolute bottom-[4.5em] flex w-[95%] items-end justify-between">
+                        <div class="h-[3em] w-[4em] rounded-[1em] bg-[#4B448B]"></div>
+                        <div class="h-[3.5em] w-[4em] rounded-[1em] bg-[#4B448B]"></div>
+                        <div class="h-[4em] w-[4em] rounded-[1em] bg-[#4B448B]"></div>
+                        <div class="h-[3.5em] w-[4em] rounded-[1em] bg-[#4B448B]"></div>
+                        <div class="h-[3em] w-[4em] rounded-[1em] bg-[#4B448B]"></div>
+                    </div>
+                </div>
+                <div class="animate__animated flex h-full w-full flex-col items-center">
+                    <div class="mt-[2.5em] flex w-[78%] flex-col items-center">
+                        <div class="flex h-[3.4em] w-full min-w-0 rounded-[.8em] bg-violet-200">
+                            <div class="flex h-full w-full items-center justify-center">
+                                <input type="text" placeholder="Search for any skills..." id="skill-search-input" class="flex h-[80%] w-[97%] rounded-[.5em] bg-transparent bg-white p-[.5em] outline-none" />
+                            </div>
+
+                            <div class="flex h-full min-w-[3em] items-center justify-center rounded-[.8em] bg-violet-950 text-white">
+                                <i class="fa-solid fa-magnifying-glass"></i>
+                            </div>
+                        </div>
+                        <div class="relative flex justify-end gap-3 rounded-b-[.8em] bg-white px-[.7em] py-[.4em] lg:gap-7">
+                            <div class="flex items-center gap-3" id="filter-selector-parent">
+                                <div onclick="updateBarColorBtns(0)" class="h-[1.5em] w-[1.5em] cursor-pointer rounded-full border-black bg-red-600"></div>
+                                <div onclick="updateBarColorBtns(1)" class="h-[1.5em] w-[1.5em] cursor-pointer rounded-full border-black bg-yellow-300"></div>
+                                <div onclick="updateBarColorBtns(2)" class="h-[1.5em] w-[1.5em] cursor-pointer rounded-full border-black bg-green-500"></div>
+                                <div onclick="updateBarColorBtns(3)" class="h-[1.5em] w-[1.5em] cursor-pointer rounded-full border-black bg-purple-500"></div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="mt-[1.1em] flex h-[25em] min-h-[18.5em] w-[87%] overflow-hidden rounded-t-[1em] border-[.5em] border-brickSet1 bg-brickSet1">
+                        <div class="flex w-full flex-col items-center overflow-hidden rounded-b-[.5em] bg-white">
+                            <div class="flex w-full">
+                                <p id="skill-tower-text" class="rounded-br-[.5em] bg-yellow-300 px-[1em] py-[.2em] text-[1.2em]">LEGEND SKILLS</p>
+                            </div>
+                            <div id="skill-list" class="my-[1.2em] grid h-full w-[99%] grid-cols-3 content-start justify-evenly justify-items-center gap-y-[2em] overflow-y-auto"></div>
+                        </div>
+                    </div>
+
+                    <div class="relative flex h-[.3em] w-[87%] items-start justify-between overflow-visible bg-brickSet1">
+                        <div class="h-[1.5em] w-[6em] rounded-b-[.5em] bg-brickSet1"></div>
+                        <div class="h-[1.5em] w-[6em] rounded-b-[.5em] bg-brickSet1"></div>
+                        <div class="h-[1.5em] w-[6em] rounded-b-[.5em] bg-brickSet1"></div>
+                    </div>
+                </div>
+
+                <!-- LEFT BANNERS -->
+                <div class="absolute left-[-4.3em] top-[4em] z-0 flex w-[5em] flex-col">
+                    <div class="absolute h-[1em] w-full rounded-[.5em] bg-purple-900"></div>
+                    <button id="skill-close-menu" class="h-[5em] w-[70%] rounded-[.5em] bg-red-500 hover:h-[6em]">
+                        <i class="fa-solid fa-xmark mt-[.4em] text-[2em] text-white"></i>
+                    </button>
+                </div>
+
+                <div class="absolute left-[-4.3em] top-[13em] z-0 flex flex-col gap-[1.3em]">
+                    <div class="flex w-[5em] flex-col">
+                        <div class="absolute h-[1em] w-full rounded-[.5em] bg-purple-900"></div>
+                        <button id="skill-switch-legend" class="h-[5em] w-[70%] rounded-[.5em] bg-yellow-400 hover:h-[6em]">
+                            <i class="fa-solid fa-person-rifle mt-[.4em] text-[2em] text-white"></i>
+                        </button>
+                    </div>
+
+                    <div class="flex w-[5em] flex-col">
+                        <div class="absolute h-[1em] w-full rounded-[.5em] bg-purple-900"></div>
+                        <button id="skill-switch-champion" class="h-[5em] w-[70%] rounded-[.5em] bg-red-500 hover:h-[6em]">
+                            <i class="fa-solid fa-chess-king mt-[.4em] text-[2em] text-white"></i>
+                        </button>
+                    </div>
+
+                    <div class="flex w-[5em] flex-col">
+                        <div class="absolute h-[1em] w-full rounded-[.5em] bg-purple-900"></div>
+                        <button id="skill-switch-object" class="h-[5em] w-[70%] rounded-[.5em] bg-green-500 hover:h-[6em]">
+                            <i class="fa-solid fa-meteor mt-[.4em] text-[2em] text-white"></i>
+                        </button>
+                    </div>
+                </div>
+
+                <!-- RIGHT BANNERS -->
+
+                <div class="absolute right-[-4.3em] top-[7em] z-0 flex w-[5em] flex-col items-end">
+                    <div class="absolute h-[1em] w-full rounded-[.5em] bg-purple-900"></div>
+                    <button id="skill-menu-change" class="h-[5em] w-[70%] rounded-[.5em] bg-red-500 hover:h-[6em]">
+                        <i class="fa-solid fa-pen mt-[.4em] text-[1.8em] text-white"></i>
+                    </button>
+                </div>
+            </div>
+
+            <footer class="absolute bottom-0 flex h-[6em] min-h-[6em] w-full flex-col bg-primaryPurple">
+                <div class="relative flex h-[2em] w-full items-end justify-between overflow-visible bg-brickSet1">
+                    <div class="h-[175%] w-[6em] rounded-[.5em] bg-brickSet1"></div>
+                    <div class="relative top-[75%] h-[175%] w-[6em] rounded-[.5em] bg-brickSet1"></div>
+                    <div class="h-[175%] w-[6em] rounded-[.5em] bg-brickSet1"></div>
+                    <div class="relative top-[75%] h-[175%] w-[6em] rounded-[.5em] bg-brickSet1"></div>
+                    <div class="h-[175%] w-[6em] rounded-[.5em] bg-brickSet1"></div>
+                    <div class="relative top-[75%] h-[175%] w-[6em] rounded-[.5em] bg-brickSet1"></div>
+                    <div class="h-[175%] w-[6em] rounded-[.5em] bg-brickSet1"></div>
+                    <div class="relative top-[75%] h-[175%] w-[6em] rounded-[.5em] bg-brickSet1"></div>
+                    <div class="h-[175%] w-[6em] rounded-[.5em] bg-brickSet1"></div>
+                    <div class="relative top-[75%] h-[175%] w-[6em] rounded-[.5em] bg-brickSet1"></div>
+                    <div class="h-[175%] w-[6em] rounded-[.5em] bg-brickSet1"></div>
+                    <div class="relative top-[75%] h-[175%] w-[6em] rounded-[.5em] bg-brickSet1"></div>
+                    <div class="h-[175%] w-[6em] rounded-[.5em] bg-brickSet1"></div>
+                </div>
+            </footer>
+
+            <ul class="circles">
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+            </ul>
+        </section>
+
+        <a href="" class="link-downloader" style="display: none"></a>
+
+        <script src="JS/private/index/indexElements.js"></script>
+        <script src="JS/libraries/utilities.js"></script>
+
+        <script src="JS/private/index/backgroundChanger.js"></script>
+        <script src="JS/private/index/index.js"></script>
+
+        <script src="JS/private/index/foregroundChanger.js"></script>
+        <script src="JS/private/index/skillsMenu.js"></script>
+        <script src="JS/private/index/descriptionChanger.js"></script>
+        <script src="JS/libraries/animations.js"></script>
+    </body>
+</html>

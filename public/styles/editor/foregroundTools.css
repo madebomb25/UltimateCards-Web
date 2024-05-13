@@ -1,0 +1,108 @@
+.title-box-manager {
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    z-index:0;
+    position: absolute;
+    font-size: 16px;
+    height:5em;
+    border: .5em solid rgb(219, 219, 219);
+    border-bottom: none;
+    border-radius: .6em .6em 0 0;
+    transition:transform .2s ease;
+    background-color: white;
+}
+
+.title-box-manager .title-box-options {
+    display:grid;
+    grid-template-columns: repeat(3, 1fr);
+    justify-content: center;
+    align-items: center;
+    justify-items: center;
+    row-gap: 1em;
+    flex-wrap: wrap;
+    overflow-y: auto;
+    width:95%;
+    height:3.3em;
+}
+
+/*
+Adding the background here makes the :hover to not work. This is due that this rule is more specific
+than others. So when i add an external class like .decrease-box-width it has less relevance than the
+main one and the change is not applied. So only more priority classes than this are able to force a 
+background change.
+
+This can be demostrated by just adding the :hover class to '.title-box-manager .title-box-options button' instead
+of .decrease-box-width, that is less specific and has lesser relevance (even with :hover).
+*/
+
+.title-box-manager .title-box-options div,
+.title-box-manager .title-box-options button {
+
+    display:flex;
+    align-items: center;
+    justify-content: center;
+    position:relative;
+
+    width:3.25em;
+    height:3.25em;
+    font-size: 1em;
+    border-radius: 1.25em;
+    overflow:hidden;
+    border:transparent;
+    cursor:pointer;
+}
+
+.title-box-manager .title-box-options i {
+    transition:color .4s ease;
+}
+
+.title-box-options button {
+    transition:background-color .4s ease;
+    background-color: rgb(189, 189, 188);
+}
+
+.decrease-box-width:hover,
+.decrease-font-size:hover {
+    background-color: rgb(193, 8, 8);
+}
+
+.increase-box-width:hover,
+.increase-font-size:hover {
+    background-color: #9bd613;
+}
+
+.title-box-manager .title-box-options input {
+    position: absolute;
+    width:100%;
+    height:100%;
+    border: none;
+    cursor: pointer;
+    opacity: 0;
+}
+
+.title-box-manager input[type="color"]::-webkit-color-swatch-wrapper {
+    padding: 0;
+}
+
+.title-box-manager input[type="color"]::-webkit-color-swatch {
+    border: none;
+}
+
+@media screen and (max-width:460px),(max-height:300px) {
+    .title-box-manager {
+        font-size: 10px;
+        z-index: 5;
+        border-right:none;
+        border-left:none;
+        border-bottom: none;
+        border-radius:0;
+        border-radius: .1em;
+        transform: translateY(-.48em);
+    }
+
+    .title-box-options {
+        height: 95% !important;
+        align-content: center;
+    }
+}

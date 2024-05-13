@@ -1,0 +1,455 @@
+<!doctype html>
+<html lang="es">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+        <link rel="stylesheet" href="styles/global/colors.css" />
+        <link rel="stylesheet" href="styles/global/output.css" />
+
+        <link rel="stylesheet" href="styles/private/collections/collections.css" />
+        <link rel="icon" href="styles/img/logo.png" type="image/png" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+
+        <script src="https://kit.fontawesome.com/f3a29394bf.js" crossorigin="anonymous"></script>
+
+        <title>Profile</title>
+    </head>
+    <body class="flex flex-col items-center overflow-x-hidden font-Roboto">
+        <header class="dec-shadow fixed z-20 flex h-[5.5em] w-full items-center justify-around bg-white">
+            <a href="index.html" class="logo flex cursor-pointer items-center gap-[1em]">
+                <img src="styles/img/logo.png" class="h-[3em]" />
+                <h1 class="font-Archive text-[27px]">ULTIMATE <span class="relative text-logoPurple">CARDS</span></h1>
+            </a>
+            <nav class="flex items-center gap-[3em]">
+                <div class="flex items-center gap-[1em]">
+                    <a href="#settings-section" class="nav-outlined">SETTINGS</a>
+                    <a href="#profile-section" class="nav-outlined">PROFILE</a>
+                    <i class="ham-menu fa-solid fa-bars"></i>
+                </div>
+                <a href="index.html" class="flex h-[3em] w-[3em] items-center justify-center rounded-[.8em] bg-alternate1">
+                    <i class="fa-solid fa-house text-white"></i>
+                </a>
+            </nav>
+        </header>
+
+        <div class="circuits-bg mt-[5.5em] flex w-full justify-center">
+            <div class="flex h-full min-h-[100dvh] w-full max-w-[78em] flex-col items-center overflow-x-hidden bg-white px-[5em]">
+                <div class="mt-[4em] flex w-full gap-[2em]">
+                    <button id="s-to-decks" class="flex flex-col gap-[.1em]">
+                        <h1 class="text-[1.3em]">DECKS</h1>
+                        <span class="h-[.4em] w-full rounded-[1em] bg-alternate1"></span>
+                    </button>
+                    <button id="s-to-designs" class="flex flex-col gap-[.1em]">
+                        <h1 class="text-[1.3em]">DESIGNS</h1>
+                        <span style="display: none" class="h-[.4em] w-full rounded-[1em] bg-alternate1"></span>
+                    </button>
+                </div>
+
+                <div class="mt-[1.5em] flex w-full items-center justify-between gap-[2em]">
+                    <div class="flex items-center gap-[2em]">
+                        <h1 id="group-text" class="min-w-fit font-Archive text-[2.5em]">YOUR DECKS</h1>
+                        <div class="flex min-w-min justify-center overflow-hidden rounded-[1em] bg-[#ece7f8] text-[1.3em]">
+                            <button id="switch-deck-mode-btn1" class="animate__animated z-10 cursor-pointer rounded-[1em] border-none bg-alternate1 p-[1em] text-center italic text-white">NORMAL</button>
+                            <button id="switch-deck-mode-btn2" class="animate__animated z-10 cursor-pointer rounded-[1em] border-none p-[1em] text-center">CUSTOM</button>
+                        </div>
+                    </div>
+
+                    <a href="#profile-section" class="flex h-[2em] w-[2em] min-w-[2em] items-center justify-center rounded-[.5em] bg-alternate1 text-[1.8em]">
+                        <i class="fa-solid fa-arrow-turn-down text-white"></i>
+                    </a>
+                </div>
+
+                <div class="relative flex min-h-[45em] w-full overflow-x-hidden">
+                    <div id="decks-group" class="animate__animated absolute mt-[4em] grid w-full grid-cols-4 justify-center gap-y-[3em]">
+                        <div onclick="updateAndOpenDeckManager(0)" class="flex h-[19em] w-[14em] cursor-pointer flex-col items-center overflow-hidden rounded-[1em] border-[.4em] border-alternate1 bg-white">
+                            <img class="h-3/5 w-full" />
+                            <div class="flex h-2/5 items-center justify-center">
+                                <div class="flex items-center gap-[2em]">
+                                    <div class="flex h-[4em] w-[3em] items-center justify-center rounded-[.5em] bg-alternate1">
+                                        <i class="fa-solid fa-person text-[2.1em] text-white"></i>
+                                    </div>
+                                    <div class="flex w-[3em] flex-col items-center justify-center text-[1.5em]">
+                                        <p>0</p>
+                                        <div class="h-[.15em] w-full rounded-[1em] bg-black"></div>
+                                        <p>40</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div onclick="updateAndOpenDeckManager(1)" class="flex h-[19em] w-[14em] cursor-pointer flex-col items-center overflow-hidden rounded-[1em] border-[.4em] border-alternate1 bg-white">
+                            <img class="h-3/5 w-full" />
+                            <div class="flex h-2/5 items-center justify-center">
+                                <div class="flex items-center gap-[2em]">
+                                    <div class="flex h-[4em] w-[3em] items-center justify-center rounded-[.5em] bg-alternate1">
+                                        <i class="fa-solid fa-person text-[2.1em] text-white"></i>
+                                    </div>
+                                    <div class="flex w-[3em] flex-col items-center justify-center text-[1.5em]">
+                                        <p>0</p>
+                                        <div class="h-[.15em] w-full rounded-[1em] bg-black"></div>
+                                        <p>40</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="flex h-[19em] w-[14em] cursor-pointer flex-col items-center justify-center overflow-hidden rounded-[1em] border-[.4em] border-dashed border-alternate1 bg-white">
+                            <div class="flex flex-col items-center text-[2.5em]">
+                                <i class="fa-solid fa-crown text-[2em] text-yellow-400"></i>
+                                <p>PRO</p>
+                            </div>
+                        </div>
+                        <div class="flex h-[19em] w-[14em] cursor-pointer flex-col items-center justify-center overflow-hidden rounded-[1em] border-[.4em] border-dashed border-alternate1 bg-white">
+                            <div class="flex flex-col items-center text-[2.5em]">
+                                <i class="fa-solid fa-crown text-[2em] text-yellow-400"></i>
+                                <p>PRO</p>
+                            </div>
+                        </div>
+                        <div class="flex h-[19em] w-[14em] cursor-pointer flex-col items-center justify-center overflow-hidden rounded-[1em] border-[.4em] border-dashed border-alternate1 bg-white">
+                            <div class="flex flex-col items-center text-[2.5em]">
+                                <i class="fa-solid fa-crown text-[2em] text-yellow-400"></i>
+                                <p>PRO</p>
+                            </div>
+                        </div>
+                        <div class="flex h-[19em] w-[14em] cursor-pointer flex-col items-center justify-center overflow-hidden rounded-[1em] border-[.4em] border-dashed border-alternate1 bg-white">
+                            <div class="flex flex-col items-center text-[2.5em]">
+                                <i class="fa-solid fa-crown text-[2em] text-yellow-400"></i>
+                                <p>PRO</p>
+                            </div>
+                        </div>
+                        <div class="flex h-[19em] w-[14em] cursor-pointer flex-col items-center justify-center overflow-hidden rounded-[1em] border-[.4em] border-dashed border-alternate1 bg-white">
+                            <div class="flex flex-col items-center text-[2.5em]">
+                                <i class="fa-solid fa-crown text-[2em] text-yellow-400"></i>
+                                <p>PRO</p>
+                            </div>
+                        </div>
+                        <div class="flex h-[19em] w-[14em] cursor-pointer flex-col items-center justify-center overflow-hidden rounded-[1em] border-[.4em] border-dashed border-alternate1 bg-white">
+                            <div class="flex flex-col items-center text-[2.5em]">
+                                <i class="fa-solid fa-crown text-[2em] text-yellow-400"></i>
+                                <p>PRO</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div id="designs-group" class="animate__animated absolute mt-[4em] hidden w-full grid-cols-4 justify-center gap-y-[3em]"></div>
+                </div>
+
+                <div id="profile-section" class="mb-[3.5em] mt-[4em] flex w-full items-center gap-[1.5em]">
+                    <div class="h-[.5em] w-full rounded-[1em] bg-alternate1"></div>
+                    <h1 class="flex min-w-fit items-center gap-[.5em] font-Archive text-[2.5em]">PROFILE</h1>
+                    <div class="h-[.5em] w-full rounded-[1em] bg-alternate1"></div>
+                </div>
+
+                <div class="flex w-full flex-col">
+                    <div class="flex flex-col gap-[1em]">
+                        <h3 class="text-[2em]">PROFILE CARD</h3>
+                        <div class="flex w-full gap-[1em]">
+                            <div id="profile-banner" class="flex h-[10em] w-[30em] min-w-[30em] items-center justify-center rounded-[1em] border-[.4em] border-alternate1 bg-cover bg-center bg-no-repeat">
+                                <div class="mx-[2em] flex items-center gap-[1.5em]">
+                                    <label for="profile-img-input" class="h-[6em] w-[6em] min-w-[6em] overflow-hidden rounded-[50%]">
+                                        <img class="h-full w-full bg-alternate1 object-cover" />
+                                    </label>
+                                    <span class="relative flex items-center justify-center rounded-[.5em] bg-alternate1 px-[.7em] py-[.4em] text-[1.5em]">
+                                        <input class="w-full bg-transparent text-white placeholder-white outline-none" maxlength="18" type="text" value="NICKNAME" placeholder="NICKNAME..." />
+                                    </span>
+                                </div>
+                            </div>
+                            <div class="flex w-full items-center justify-center gap-[3em]">
+                                <button id="banner-fc-input" class="relative flex h-full w-[13em] flex-col items-center overflow-hidden rounded-[1em]" style="box-shadow: 0px 2px 9px 1px rgba(31, 28, 65, 0.15)">
+                                    <span class="flex h-full w-full min-w-[3em] items-center justify-center rounded-[1em] bg-violet-200">
+                                        <i class="fa-solid fa-font text-[1.4em]"></i>
+                                    </span>
+                                    <div class="flex h-[4em] items-center justify-center">
+                                        <p class="ml-[.5em] mr-[.5em] w-full text-left text-[1.1em]">FONT COLOR</p>
+                                    </div>
+                                    <input class="absolute h-full w-full cursor-pointer opacity-0" type="color" value="#524AA6" />
+                                </button>
+
+                                <button id="banner-bc-input" class="relative flex h-full w-[13em] flex-col items-center overflow-hidden rounded-[1em]" style="box-shadow: 0px 2px 9px 1px rgba(31, 28, 65, 0.15)">
+                                    <span class="flex h-full w-full min-w-[3em] items-center justify-center rounded-[1em] bg-violet-200">
+                                        <i class="fa-solid fa-paint-roller text-[1.4em]"></i>
+                                    </span>
+                                    <div class="flex h-[4em] cursor-pointer items-center justify-center">
+                                        <p class="ml-[.5em] mr-[.5em] w-full text-left text-[1.1em]">BACKGROUND COLOR</p>
+                                    </div>
+                                    <input class="absolute h-full w-full cursor-pointer opacity-0" type="color" value="#524AA6" />
+                                </button>
+                            </div>
+                        </div>
+                        <div class="mt-[1em] flex flex-wrap gap-[2em]">
+                            <label for="profile-img-input" class="relative flex h-[4em] min-w-[13em] items-center overflow-hidden rounded-[1em]" style="box-shadow: 0px 2px 9px 1px rgba(31, 28, 65, 0.15)">
+                                <span class="flex h-full min-w-[4em] items-center justify-center rounded-[1em] bg-violet-200">
+                                    <i class="fa-solid fa-circle-user text-[1.6em]"></i>
+                                </span>
+                                <div class="flex h-[4em] cursor-pointer items-center justify-center">
+                                    <p class="ml-[.6em] mr-[.7em] w-full text-left text-[1.1em]">PROFILE IMAGE</p>
+                                </div>
+                            </label>
+                            <label for="background-img-input" class="relative flex h-[4em] min-w-[13em] items-center overflow-hidden rounded-[1em]" style="box-shadow: 0px 2px 9px 1px rgba(31, 28, 65, 0.15)">
+                                <span class="flex h-full min-w-[4em] items-center justify-center rounded-[1em] bg-violet-200">
+                                    <i class="fa-solid fa-mountain-city text-[1.5em]"></i>
+                                </span>
+                                <div class="flex h-[4em] cursor-pointer items-center justify-center">
+                                    <p class="ml-[.6em] mr-[.7em] w-full text-left text-[1.1em]">BACKGROUND IMAGE</p>
+                                </div>
+                            </label>
+                        </div>
+                        <div class="mt-[1em] flex gap-[2em]">
+                            <button onclick="saveBanner()" class="flex h-[4em] w-fit items-center overflow-hidden rounded-[1em]" style="box-shadow: 0px 2px 9px 1px rgba(31, 28, 65, 0.15)">
+                                <span class="flex h-full min-w-[4em] items-center justify-center rounded-[1em] bg-green-400">
+                                    <i class="fa-solid fa-floppy-disk text-[1.6em]"></i>
+                                </span>
+                                <div class="flex h-[4em] cursor-pointer items-center justify-center">
+                                    <p class="ml-[.6em] mr-[.7em] w-full text-left text-[1.1em]">SAVE BANNER</p>
+                                </div>
+                            </button>
+                        </div>
+                    </div>
+
+                    <div id="settings-section" class="mb-[3.5em] mt-[4em] flex w-full items-center gap-[1.5em]">
+                        <div class="h-[.5em] w-full rounded-[1em] bg-alternate1"></div>
+                        <h1 class="flex min-w-fit items-center gap-[.5em] font-Archive text-[2.5em]">SETTINGS</h1>
+                        <div class="h-[.5em] w-full rounded-[1em] bg-alternate1"></div>
+                    </div>
+                    <div class="mb-[10em] flex flex-col gap-[1em]">
+                        <div class="flex gap-[2em]">
+                            <button onclick="openPopup('reset-password-popup')" class="flex h-[4em] w-fit items-center overflow-hidden rounded-[1em]" style="box-shadow: 0px 2px 9px 1px rgba(31, 28, 65, 0.15)">
+                                <span class="flex h-full min-w-[4em] items-center justify-center rounded-[1em] bg-buttonYellow">
+                                    <i class="fa-solid fa-key text-[1.6em]"></i>
+                                </span>
+                                <div class="flex h-[4em] cursor-pointer items-center justify-center">
+                                    <p class="ml-[.6em] mr-[.7em] w-full text-left text-[1.1em]">CHANGE PASSWORD</p>
+                                </div>
+                            </button>
+                            <button onclick="openPopup('delete-user-popup')" class="flex h-[4em] w-fit items-center overflow-hidden rounded-[1em]" style="box-shadow: 0px 2px 9px 1px rgba(31, 28, 65, 0.15)">
+                                <span class="flex h-full min-w-[4em] items-center justify-center rounded-[1em] bg-buttonRed">
+                                    <i class="fa-solid fa-trash text-[1.6em]"></i>
+                                </span>
+                                <div class="flex h-[4em] cursor-pointer items-center justify-center">
+                                    <p class="ml-[.6em] mr-[.7em] w-full text-left text-[1.1em]">DELETE ACCOUNT</p>
+                                </div>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- DECK MANAGER -->
+
+        <div id="deck-manager" class="fixed z-20 hidden h-[100dvh] w-full items-center justify-center">
+            <div class="flex h-full w-full bg-black opacity-50"></div>
+            <div class="absolute flex h-[96%] w-fit rounded-[1.5em] bg-white p-[.8em]">
+                <div class="flex h-full w-full rounded-[1em] border-[.45em] border-alternate1">
+                    <div class="flex h-full w-full gap-[1.1em] p-[1em]">
+                        <div class="flex min-w-min flex-col justify-between">
+                            <div id="deck-num-selector" class="flex flex-col gap-[1em]">
+                                <button onclick="updateDeckNumBtns(0)" class="h-[4em] w-[4em] rounded-[1em] border-[.35em] border-dashed border-alternate1 bg-alternate1 text-white">
+                                    <i class="fa-solid fa-1 text-[1.5em]"></i>
+                                </button>
+                                <button onclick="updateDeckNumBtns(1)" class="h-[4em] w-[4em] rounded-[1em] border-[.35em] border-dashed border-alternate1 text-black">
+                                    <i class="fa-solid fa-2 text-[1.5em]"></i>
+                                </button>
+                                <button onclick="updateDeckNumBtns(2)" class="h-[4em] w-[4em] rounded-[1em] border-[.35em] border-dashed border-alternate1 text-black">
+                                    <i class="fa-solid fa-crown text-[1.5em] text-yellow-400"></i>
+                                </button>
+                                <button onclick="updateDeckNumBtns(3)" class="h-[4em] w-[4em] rounded-[1em] border-[.35em] border-dashed border-alternate1 text-black">
+                                    <i class="fa-solid fa-crown text-[1.5em] text-yellow-400"></i>
+                                </button>
+                                <button onclick="updateDeckNumBtns(4)" class="h-[4em] w-[4em] rounded-[1em] border-[.35em] border-dashed border-alternate1 text-black">
+                                    <i class="fa-solid fa-crown text-[1.5em] text-yellow-400"></i>
+                                </button>
+                                <button onclick="updateDeckNumBtns(5)" class="h-[4em] w-[4em] rounded-[1em] border-[.35em] border-dashed border-alternate1 text-black">
+                                    <i class="fa-solid fa-crown text-[1.5em] text-yellow-400"></i>
+                                </button>
+                                <button onclick="updateDeckNumBtns(6)" class="h-[4em] w-[4em] rounded-[1em] border-[.35em] border-dashed border-alternate1 text-black">
+                                    <i class="fa-solid fa-crown text-[1.5em] text-yellow-400"></i>
+                                </button>
+                                <button onclick="updateDeckNumBtns(7)" class="h-[4em] w-[4em] rounded-[1em] border-[.35em] border-dashed border-alternate1 text-black">
+                                    <i class="fa-solid fa-crown text-[1.5em] text-yellow-400"></i>
+                                </button>
+                            </div>
+                            <div class="flex flex-col gap-[1em]">
+                                <button onclick="saveDeckChanges()" class="flex h-[4em] w-[4em] items-center justify-center overflow-hidden rounded-[1em] bg-green-500">
+                                    <i class="fa-solid fa-floppy-disk text-[1.8em]"></i>
+                                </button>
+                                <button onclick="closePopup('deck-manager')" class="flex h-[4em] w-[4em] items-center justify-center rounded-[1em] bg-red-600">
+                                    <i class="fa-solid fa-xmark text-[2em] text-white"></i>
+                                </button>
+                            </div>
+                        </div>
+                        <div class="flex h-full w-full">
+                            <div class="h-full min-w-[.45em] bg-alternate1 opacity-35"></div>
+                            <div class="flex w-full flex-col px-[1em]">
+                                <div class="flex w-full gap-[1em]">
+                                    <label id="deck-img" for="deck-img-input" class="relative flex h-[6em] min-h-[6em] w-[6em] min-w-[6em] cursor-pointer items-center justify-center gap-1 overflow-hidden rounded-[1em] border-[.35em] border-dashed border-alternate1">
+                                        <i class="fa-solid fa-image text-[2.5em] text-alternate1"></i>
+                                        <img src="" class="absolute hidden h-full w-full object-cover" id="current-skill-img" />
+                                    </label>
+                                    <div class="flex w-full flex-col justify-between">
+                                        <div class="flex items-center gap-[1em]">
+                                            <div class="flex h-[3.2em] min-h-[3.2em] w-full max-w-[20em] items-center gap-5">
+                                                <div class="flex h-full w-full rounded-[.8em] bg-violet-200">
+                                                    <div class="flex w-full p-[.45em]">
+                                                        <input id="deck-search-bar" type="text" placeholder="Search for any cards" class="flex h-full w-full rounded-[.5em] bg-transparent bg-white p-[.5em] outline-none" />
+                                                    </div>
+
+                                                    <div class="flex h-full min-w-[3.2em] items-center justify-center rounded-[.8em] bg-alternate1 text-white">
+                                                        <i class="fa-solid fa-magnifying-glass"></i>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div id="deck-type-selector" class="flex gap-[1em]">
+                                                <button onclick="updateDeckTypeBtns(0)" class="flex min-h-[3.2em] min-w-[3.2em] cursor-pointer items-center justify-center rounded-[.5em] border-[.3em] border-dashed border-alternate1 bg-alternate1 text-white">
+                                                    <i class="fa-solid fa-person-rifle text-[1.5em]"></i>
+                                                </button>
+                                                <button onclick="updateDeckTypeBtns(1)" class="flex min-h-[3.2em] min-w-[3.2em] cursor-pointer items-center justify-center rounded-[.5em] border-[.3em] border-dashed border-alternate1">
+                                                    <i class="fa-solid fa-chess-king text-[1.5em]"></i>
+                                                </button>
+                                                <button onclick="updateDeckTypeBtns(2)" class="flex min-h-[3.2em] min-w-[3.2em] cursor-pointer items-center justify-center rounded-[.5em] border-[.3em] border-dashed border-alternate1">
+                                                    <i class="fa-solid fa-meteor text-[1.5em]"></i>
+                                                </button>
+                                            </div>
+
+                                            <span class="h-full min-w-[.5em] rounded-[1em] bg-alternate1 opacity-35"></span>
+
+                                            <button onclick="viewOrEdit(this)" class="flex min-h-[3.2em] min-w-[3.2em] cursor-pointer items-center justify-center rounded-[.5em] border-[.3em] border-dashed border-alternate1 bg-alternate1 text-white">
+                                                <i class="fa-solid fa-pen-to-square text-[1.5em]"></i>
+                                            </button>
+                                            <h1 id="deck-mode-text" class="min-w-fit font-Archive text-[1.6em]">EDITING MODE</h1>
+                                        </div>
+
+                                        <div id="deck-color-selector" class="flex items-center gap-3">
+                                            <button onclick="updateDeckColorBtns(0)" class="h-[2em] w-[2em] cursor-pointer rounded-[.6em] border-black bg-red-600"></button>
+                                            <button onclick="updateDeckColorBtns(1)" id="ec1" class="h-[2em] w-[2em] cursor-pointer rounded-[.6em] border-black bg-yellow-300"></button>
+                                            <button onclick="updateDeckColorBtns(2)" id="ec2" class="h-[2em] w-[2em] cursor-pointer rounded-[.6em] border-black bg-green-500"></button>
+                                            <button onclick="updateDeckColorBtns(3)" id="ec3" class="h-[2em] w-[2em] cursor-pointer rounded-[.6em] border-black bg-purple-500"></button>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div id="deck-list" class="mt-[2em] grid h-full w-full content-start gap-[2em] overflow-y-auto overflow-x-hidden pr-[1em]" style="grid-template-columns: repeat(5, 15em)"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!--SETTINGS POPUPS-->
+        <div id="reset-password-popup" class="fixed z-20 hidden h-[100dvh] w-full items-center justify-center">
+            <div class="flex h-full w-full bg-black opacity-50"></div>
+            <div class="absolute flex h-fit w-[30em] rounded-[1.5em] bg-white p-[.8em]">
+                <div class="flex h-full w-full flex-col items-center justify-center rounded-[1em] border-[.45em] border-dashed border-alternate1">
+                    <div class="flex flex-col justify-center p-[1.52em]">
+                        <div class="flex items-center gap-[1em]">
+                            <div class="flex h-[2em] w-[2em] items-center justify-center rounded-[.5em] bg-buttonYellow text-[2em]">
+                                <i class="fa-solid fa-unlock"></i>
+                            </div>
+                            <h1 class="font-Archive text-[2em]">CHANGE PASSWORD</h1>
+                        </div>
+                        <div id="reset-password-error" class="mt-[1em] hidden w-full items-center justify-center gap-[.5em] rounded-[.5em] bg-red-600 p-[.8em] text-[1.3em]"></div>
+                        <p class="mt-[1em] text-[1.1em]">This action is not reversable! Verify your identity filling the fields with your current and new password.</p>
+                        <div class="my-[1em] flex flex-col gap-[1em]">
+                            <div class="flex w-full flex-col items-center gap-[.55em]">
+                                <input id="reset-password" type="password" placeholder="Account password" class="w-full border-none text-[1.05em] outline-none" />
+                                <span class="my-[.1em] h-[.5em] w-full rounded-[1.25em]" style="background: linear-gradient(145deg, rgba(108, 55, 207, 1) 0%, rgba(64, 123, 255, 1) 100%)"></span>
+                            </div>
+                            <div class="flex w-full flex-col items-center gap-[.55em]">
+                                <input id="reset-new-password" type="password" placeholder="New password" class="w-full border-none text-[1.05em] outline-none" />
+                                <span class="my-[.1em] h-[.5em] w-full rounded-[1.25em]" style="background: linear-gradient(145deg, rgba(108, 55, 207, 1) 0%, rgba(64, 123, 255, 1) 100%)"></span>
+                            </div>
+                            <div class="flex w-full flex-col items-center gap-[.55em]">
+                                <input id="reset-new-password-copy" type="password" placeholder="Confirm new password" class="w-full border-none text-[1.05em] outline-none" />
+                                <span class="my-[.1em] h-[.5em] w-full rounded-[1.25em]" style="background: linear-gradient(145deg, rgba(108, 55, 207, 1) 0%, rgba(64, 123, 255, 1) 100%)"></span>
+                            </div>
+                        </div>
+
+                        <div id="reset-password-buttons" class="mt-[1.5em] flex w-full gap-[1.5em]">
+                            <button onclick="resetPassword()" class="h-[2em] w-[2em] rounded-[.5em] text-[1.9em] transition-colors hover:bg-green-500" style="box-shadow: 0px 2px 9px 1px rgba(0, 0, 0, 0.25)">
+                                <i class="fa-solid fa-check"></i>
+                            </button>
+                            <button onclick="closeResetPopup()" class="h-[2em] w-[2em] rounded-[.5em] text-[1.9em] transition-colors hover:bg-red-600" style="box-shadow: 0px 2px 9px 1px rgba(0, 0, 0, 0.25)">
+                                <i class="fa-solid fa-xmark"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div id="delete-user-popup" class="fixed z-20 hidden h-[100dvh] w-full items-center justify-center">
+            <div class="flex h-full w-full bg-black opacity-50"></div>
+            <div class="absolute flex h-fit w-[35em] rounded-[1.5em] bg-white p-[.8em]">
+                <div class="flex h-full w-full flex-col items-center justify-center rounded-[1em] border-[.45em] border-dashed border-alternate1">
+                    <div class="flex flex-col justify-center p-[1.52em]">
+                        <div class="flex items-center gap-[1em]">
+                            <div class="flex h-[2em] w-[2em] items-center justify-center rounded-[.5em] bg-red-600 text-[2em]">
+                                <i class="fa-solid fa-triangle-exclamation"></i>
+                            </div>
+                            <h1 class="font-Archive text-[2em]">DELETE USER</h1>
+                        </div>
+                        <div id="delete-user-error" class="mt-[1em] hidden w-full items-center justify-center gap-[.5em] rounded-[.5em] bg-red-600 p-[.8em] text-[1.3em]"></div>
+
+                        <p class="mt-[1em] text-[1.1em]">This action is not reversable! Any data stored in our service about this user will be lost forever. You will have 30 days to redo this change contacting our customer service.</p>
+
+                        <div class="my-[1em] flex flex-col gap-[1em]">
+                            <p class="text-[1.1em] font-medium">If you proceed, you confirm that you understand these conditions.</p>
+                            <div class="flex items-center gap-[.5em]">
+                                <input id="delete-accept" type="checkbox" class="float-left min-h-[1.5em] min-w-[1.5em]" />
+                                <p class="text-[1.1em] font-medium">I agree.</p>
+                            </div>
+                        </div>
+
+                        <div class="flex w-full flex-col items-center gap-[.55em]">
+                            <input id="delete-password" type="password" placeholder="Account password" class="w-full border-none text-[1.05em] outline-none" />
+                            <span class="my-[.1em] h-[.5em] w-full rounded-[1.25em]" style="background: linear-gradient(145deg, rgba(108, 55, 207, 1) 0%, rgba(64, 123, 255, 1) 100%)"></span>
+                        </div>
+
+                        <div id="delete-user-buttons" class="mt-[2em] flex w-full gap-[1.5em]">
+                            <button onclick="deleteAccount()" class="h-[2em] w-[2em] rounded-[.5em] text-[1.9em] transition-colors hover:bg-green-500" style="box-shadow: 0px 2px 9px 1px rgba(0, 0, 0, 0.25)">
+                                <i class="fa-solid fa-check"></i>
+                            </button>
+                            <button onclick="closeDeletePopup()" class="h-[2em] w-[2em] rounded-[.5em] text-[1.9em] transition-colors hover:bg-red-600" style="box-shadow: 0px 2px 9px 1px rgba(0, 0, 0, 0.25)">
+                                <i class="fa-solid fa-xmark"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!--SETTINGS POPUPS-->
+
+        <footer class="relative flex h-[6em] min-h-[6em] w-full flex-col">
+            <div class="h-full w-full bg-primaryPurple">
+                <div class="relative flex h-[2em] w-full items-end justify-between overflow-visible bg-brickSet1">
+                    <div class="h-[175%] w-[6em] rounded-[.5em] bg-brickSet1"></div>
+                    <div class="relative top-[75%] h-[175%] w-[6em] rounded-[.5em] bg-brickSet1"></div>
+                    <div class="h-[175%] w-[6em] rounded-[.5em] bg-brickSet1"></div>
+                    <div class="relative top-[75%] h-[175%] w-[6em] rounded-[.5em] bg-brickSet1"></div>
+                    <div class="h-[175%] w-[6em] rounded-[.5em] bg-brickSet1"></div>
+                    <div class="relative top-[75%] h-[175%] w-[6em] rounded-[.5em] bg-brickSet1"></div>
+                    <div class="h-[175%] w-[6em] rounded-[.5em] bg-brickSet1"></div>
+                    <div class="relative top-[75%] h-[175%] w-[6em] rounded-[.5em] bg-brickSet1"></div>
+                    <div class="h-[175%] w-[6em] rounded-[.5em] bg-brickSet1"></div>
+                    <div class="relative top-[75%] h-[175%] w-[6em] rounded-[.5em] bg-brickSet1"></div>
+                    <div class="h-[175%] w-[6em] rounded-[.5em] bg-brickSet1"></div>
+                    <div class="relative top-[75%] h-[175%] w-[6em] rounded-[.5em] bg-brickSet1"></div>
+                    <div class="h-[175%] w-[6em] rounded-[.5em] bg-brickSet1"></div>
+                </div>
+            </div>
+        </footer>
+
+        <input class="hidden" id="profile-img-input" type="file" accept="image/jpeg, image/jpg, image/png" />
+        <input class="hidden" id="background-img-input" type="file" accept="image/jpeg, image/jpg, image/png" />
+
+        <a href="" id="link-downloader" style="display: none"></a>
+
+        <script src="JS/libraries/utilities.js"></script>
+
+        <script src="JS/private/profile/profileElements.js"></script>
+        <script src="JS/private/profile/profile.js"></script>
+        <script src="JS/private/profile/decks.js"></script>
+        <script src="JS/private/profile/settings.js"></script>
+    </body>
+</html>
